@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" sizes="500x500" href="assets/img/local/pottoceramic.png">
+    <meta name="theme-color" content="rgb(125, 201, 252)">
+    <meta name="description" content="As weird as a name can get.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image"
+        content="https://raw.githubusercontent.com/Potato22/pottofolio/main/assets/img/content/cityscape.png">
+    <meta name="twitter:title" content="Potto">
+    <meta name="twitter:description" content="As weird as a name can get.">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/Potato22/pottofolio/main/assets/img/content/cityscape.png">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potto • Gallery</title>
+
+    <script src="assets/js/lib/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="assets/css/global/root.css">
+    <link rel="stylesheet" href="assets/css/index-gallery.css">
+    <link rel="stylesheet" href="assets/css/gallery.css">
+    <script src="assets/js/themetoggle.js" defer></script>
+</head>
+
+<body>
+    <!-- orb cursor -->
+    <div class="orbcursor"></div>
+    <!-- theme toggle -->
+    <div class="themetogglecont">
+        <div class="togglecont">
+            <div class="splash"></div>
+            <label class="checkboxtrig">
+                <input type="checkbox" id="ttogle" />
+                <div class="material-icons-outlined icon">light_mode</div>
+        </div>
+    </div>
+    
+    <!--IMGZOOMIN-->
+    <div class="zoomindimmer"></div>
+    <div class="zoomin">
+        <div class="zoomincontentAlign">
+            <img class="zoomincontent" src="">
+        </div>
+    </div>
+    <nav class="dynamicnav">
+        <div class="nlogo">
+            <svg viewBox="0 0 132.29 132.29">
+                <g transform="translate(108.91 -397.83)">
+                    <path class="npotto"
+                        d="m-81.612 397.83c-15.122 0-27.297 12.174-27.297 27.297v77.699c0 15.122 12.174 27.297 27.297 27.297h30.661c4.5367 0 8.1886-3.6525 8.1886-8.1892v-23.31c0-4.5367 3.6525-8.1886 8.1892-8.1886h30.66c15.122 0 27.297-12.174 27.297-27.297v-38.011c0-15.122-12.174-27.297-27.297-27.297zm0 10.054h77.699c9.5576 0 17.242 7.6848 17.242 17.242v35.441c0 10.976-8.8364 19.813-19.813 19.813h-28.09c-10.101 0-18.243 8.1411-18.243 18.243v13.256c0 4.5367-3.652 8.1892-8.1886 8.1892h-20.606c-9.5576 0-17.242-7.6848-17.242-17.242v-77.699c0-9.5576 7.6848-17.242 17.242-17.242z"
+                        stroke-width=".22038" />
+                </g>
+            </svg>
+        </div>
+        <div class="buttongroup">
+            <a href="index.html">
+                <div class="nbutton mainpage gallery">home</div>
+            </a>
+            <a href="contact">
+                <div class="nbutton mainpage contact">contact</div>
+            </a>
+        </div>
+    </nav>
+        <!-- loader -->
+        <div class="loadblock">
+            <div class="outer"></div>
+            <div class="inner"></div>
+        </div>
+    <div class="mainbox">
+        <!-- TODO #@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@#@
+            ADD BACK BUTTON
+         -->
+        <div class="cardgrid">
+            <div class="cards invis textcard titlecard huge">
+                Illustration Work
+            </div>
+        </div>
+        <div class="cardgrid" id="daImg" data-da-gallery="Potato2292/78916640">
+        </div>
+    </div>
+    <script src="assets/js/lib/dagallery.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/lib/aosconfig.js" defer></script>
+    <script src="assets/js/zoomtrigger.js"></script>
+    <script src="assets/js/orb.js"></script>
+    <script defer>
+      AOS.init();
+    </script>
+</body>
+
+</html>
