@@ -32,9 +32,9 @@ function chapter() {
     var about = $('#about').offset().top - $(window).scrollTop();
 
     var create = $('#create').offset().top - $(window).scrollTop();
-    var illus = $('#illus').offset().top - $(window).scrollTop();
-    var anim = $('#anim').offset().top - $(window).scrollTop();
-    var sket = $('#sket').offset().top - $(window).scrollTop();
+    var gall = $('#gall').offset().top - $(window).scrollTop();
+    var comm = $('#comm').offset().top - $(window).scrollTop();
+    var trivia = $('#trivia').offset().top - $(window).scrollTop();
     
     
     var contact = $('#contact').offset().top - $(window).scrollTop();
@@ -43,9 +43,9 @@ function chapter() {
     var aboutbool;
     var createbool;
     var contactbool;
-    var illusbool;
-    var animbool;
-    var sketbool;
+    var gallbool;
+    var commbool;
+    var triviabool;
 
     if (about <= 0) {
         aboutbool = true;
@@ -61,35 +61,35 @@ function chapter() {
     } else {
         createbool = false;
     }
-    if (illus <= 0) {
-        illusbool = true;
+    if (gall <= 0) {
+        gallbool = true;
         //console.log("create active")
     } else {
-        illusbool = false;
+        gallbool = false;
     }
-    if (anim <= 0) {
-        animbool = true;
-        illusbool = false;
+    if (comm <= 0) {
+        commbool = true;
+        gallbool = false;
         //console.log("create active")
     } else {
-        animbool = false;
+        commbool = false;
     }
-    if (sket <= 0) {
-        sketbool = true;
-        animbool = false;
+    if (trivia <= 0) {
+        triviabool = true;
+        commbool = false;
         //console.log("create active")
     } else {
-        sketbool = false;
+        triviabool = false;
     }
 
     if (contact <= 0) {
         contactbool = true;
         creatbool = false;
-        //console.log("anim active")
+        //console.log("comm active")
     } else {
         contactbool = false;
     }
-    console.log('creatbool', createbool, '\n illusbool', illusbool, '\n animbool', animbool, '\n sketbool', sketbool )
+    console.log('creatbool', createbool, '\n gallbool', gallbool, '\n commbool', commbool, '\n triviabool', triviabool )
 
     if (aboutbool == true) {
         $('.s1').addClass('activestrike')
@@ -102,19 +102,19 @@ function chapter() {
     } else {
         $('.s2').removeClass('activestrike')
     }
-    if (illusbool == true) {
+    if (gallbool == true) {
         $('.s2-1').addClass('blockactive')
     } else {
         $('.s2-1').removeClass('blockactive')
     }
 
-    if (animbool == true) {
+    if (commbool == true) {
         $('.s2-2').addClass('blockactive')
     } else {
         $('.s2-2').removeClass('blockactive')
     }
 
-    if (sketbool == true) {
+    if (triviabool == true) {
         $('.s2-3').addClass('blockactive')
     } else {
         $('.s2-3').removeClass('blockactive')
