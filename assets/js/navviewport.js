@@ -37,7 +37,6 @@ function chapter() {
     var trivia = $('#trivia').offset().top - $(window).scrollTop();
     
     
-    var contact = $('#contact').offset().top - $(window).scrollTop();
 
     //BOOL
     var aboutbool;
@@ -82,13 +81,6 @@ function chapter() {
         triviabool = false;
     }
 
-    if (contact <= 0) {
-        contactbool = true;
-        creatbool = false;
-        //console.log("comm active")
-    } else {
-        contactbool = false;
-    }
     console.log('creatbool', createbool, '\n gallbool', gallbool, '\n commbool', commbool, '\n triviabool', triviabool )
 
     if (aboutbool == true) {
