@@ -342,7 +342,7 @@ a.linkcard::before {
 
   .widecard {
     grid-row: span 1/auto;
-    grid-column: span 2/auto;
+    grid-column: span 1/auto;
   }
 
   .superwidecard {
