@@ -80,7 +80,7 @@ body {
   --textsecondaryD: rgb(202, 202, 202);
   --textsecondaryL: rgb(40, 40, 40);
   --accentD: rgb(90, 171, 224);
-  --accentL: rgb(252, 193, 125);
+  --accentL: rgb(238, 175, 104);
   --accentsecondaryD: rgb(191, 228, 255);
   --accentsecondaryL: rgb(255, 220, 191);
   --accentfillD: rgb(29, 31, 32);
@@ -304,7 +304,7 @@ a {
 
 .x {
   position: absolute;
-  background: white;
+  background: var(--blackfL);
   width: 4px;
   transform: rotate(45deg);
   height: 40px;
@@ -312,7 +312,7 @@ a {
 
   &::after {
     content: "";
-    background: white;
+    background: var(--blackfL);
     width: 4px;
     height: 100%;
     transform: rotate(90deg);
@@ -644,7 +644,7 @@ a {
   }
 
   to {
-    transform: scale(10) translate(-1px, -1px);
+    transform: scale(15) translate(-.5px, -.5px);
   }
 }
 
@@ -654,7 +654,7 @@ a {
 
 @keyframes idle {
   from {
-    transform: scale(10) translate(-1px, -1px);
+    transform: scale(15) translate(-.5px, -.5px);
   }
 
   to {
