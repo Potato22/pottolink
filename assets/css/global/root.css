@@ -6,7 +6,10 @@ body {
   max-width: 100%;
   background: var(--baseD);
   overflow-x: hidden;
-  user-select: none !important;
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+      -ms-user-select: none !important;
+          user-select: none !important;
 }
 
 /* ############################### */
@@ -226,7 +229,8 @@ a:link, a:visited {
   height: 100vh;
   display: grid;
   place-items: center;
-  animation: contentdialog 0.8s forwards var(--sleek);
+  -webkit-animation: contentdialog 0.8s forwards var(--sleek);
+          animation: contentdialog 0.8s forwards var(--sleek);
   opacity: 0;
   transition: all 0.3s var(--accel);
   transform: scale(1.5);
@@ -487,7 +491,8 @@ a:link, a:visited {
   height: 70px;
   /*border: black 2px;*/
   border-radius: 50%;
-  animation: spinouter 2s cubic-bezier(0.08, 0.22, 0, 0.99) infinite;
+  -webkit-animation: spinouter 2s cubic-bezier(0.08, 0.22, 0, 0.99) infinite;
+          animation: spinouter 2s cubic-bezier(0.08, 0.22, 0, 0.99) infinite;
   transition: border 0.2s cubic-bezier(0.66, 0.02, 0.88, 0.32);
   border-color: rgba(0, 0, 0, 0);
 }
@@ -497,8 +502,33 @@ a:link, a:visited {
   height: 30px;
   position: absolute;
   border-radius: 50%;
-  animation: spinouter 2s cubic-bezier(0.08, 0.22, 0, 0.99) 1.5s infinite;
+  -webkit-animation: spinouter 2s cubic-bezier(0.08, 0.22, 0, 0.99) 1.5s infinite;
+          animation: spinouter 2s cubic-bezier(0.08, 0.22, 0, 0.99) 1.5s infinite;
   border-color: rgba(0, 0, 0, 0);
+}
+
+@-webkit-keyframes spinouter {
+  0% {
+    transform: rotate(0deg);
+    border: solid var(--accentD) 4px;
+  }
+  25% {
+    transform: rotate(90deg);
+    border: solid var(--blackfL) 20px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border: solid var(--blackfL) 10px;
+    border-radius: 0px;
+  }
+  75% {
+    transform: rotate(270deg);
+    border: solid var(--blackfL) 30px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border: solid var(--blackfL) 4px;
+  }
 }
 
 @keyframes spinouter {
@@ -567,7 +597,17 @@ a:link, a:visited {
 }
 
 .animactive {
-  animation: orbactive 0.5s forwards var(--sleek);
+  -webkit-animation: orbactive 0.5s forwards var(--sleek);
+          animation: orbactive 0.5s forwards var(--sleek);
+}
+
+@-webkit-keyframes orbactive {
+  from {
+    transform: scale(5);
+  }
+  to {
+    transform: scale(1) translate(calc(var(--orbsize) / -2), calc(var(--orbsize) / -2));
+  }
 }
 
 @keyframes orbactive {
@@ -579,7 +619,17 @@ a:link, a:visited {
   }
 }
 .animoff {
-  animation: animoff 1s forwards var(--sleek);
+  -webkit-animation: animoff 1s forwards var(--sleek);
+          animation: animoff 1s forwards var(--sleek);
+}
+
+@-webkit-keyframes animoff {
+  from {
+    transform: scale(1) translate(calc(var(--orbsize) / -2), calc(var(--orbsize) / -2));
+  }
+  to {
+    transform: scale(0);
+  }
 }
 
 @keyframes animoff {
@@ -591,7 +641,17 @@ a:link, a:visited {
   }
 }
 .hoveringattr {
-  animation: hovering 0.5s forwards var(--sleek);
+  -webkit-animation: hovering 0.5s forwards var(--sleek);
+          animation: hovering 0.5s forwards var(--sleek);
+}
+
+@-webkit-keyframes hovering {
+  from {
+    transform: scale(1) translate(calc(var(--orbsize) / -2), calc(var(--orbsize) / -2));
+  }
+  to {
+    transform: scale(15) translate(-0.5px, -0.5px);
+  }
 }
 
 @keyframes hovering {
@@ -603,7 +663,17 @@ a:link, a:visited {
   }
 }
 .idle {
-  animation: idle 0.5s forwards var(--sleek);
+  -webkit-animation: idle 0.5s forwards var(--sleek);
+          animation: idle 0.5s forwards var(--sleek);
+}
+
+@-webkit-keyframes idle {
+  from {
+    transform: scale(15) translate(-0.5px, -0.5px);
+  }
+  to {
+    transform: scale(1) translate(calc(var(--orbsize) / -2), calc(var(--orbsize) / -2));
+  }
 }
 
 @keyframes idle {
@@ -614,6 +684,4 @@ a:link, a:visited {
     transform: scale(1) translate(calc(var(--orbsize) / -2), calc(var(--orbsize) / -2));
   }
 }
-/*# sourceMappingURL=root.css.map */
-
-/*# sourceMappingURL=root.css.map */
+/*# sourceMappingURL=root.css.map *//*# sourceMappingURL=root.css.map */

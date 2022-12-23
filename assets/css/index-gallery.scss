@@ -439,6 +439,11 @@
     border-bottom: solid var(--textD) 1px;
   }
   
+  .medium {
+    font-size: 2em;
+    font-family: var(--display);
+    font-weight: 500;
+  }
   .big {
     font-size: 3em;
     font-family: var(--display);
