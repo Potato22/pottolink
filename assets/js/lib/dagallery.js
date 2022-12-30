@@ -27,6 +27,7 @@
                 //You can change the template of what the script will inject into DOM here. Feel free to customize!
                 img.setAttribute('data-aos', 'zoom-in')
                 img.setAttribute('class', 'imgs cards imgcard daImgs')
+                img.setAttribute('orbReact', 'true')
                 img.src = image.imageUrl
                 img.alt = image.title
                 fragment.append(img)

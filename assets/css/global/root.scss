@@ -592,9 +592,12 @@ a {
 }
 
 .orbcursor {
+  --orbsize: 10px;
+  --growScale: 10;
+  --offset: -.5px;
+
   display: none;
   position: fixed;
-  --orbsize: 10px;
   width: var(--orbsize);
   height: var(--orbsize);
   background: white;
@@ -644,7 +647,7 @@ a {
   }
 
   to {
-    transform: scale(15) translate(-.5px, -.5px);
+    transform: scale(var(--growScale)) translate(var(--offset), var(--offset));
   }
 }
 
@@ -654,7 +657,7 @@ a {
 
 @keyframes idle {
   from {
-    transform: scale(15) translate(-.5px, -.5px);
+    transform: scale(var(--growScale)) translate(var(--offset), var(--offset));
   }
 
   to {

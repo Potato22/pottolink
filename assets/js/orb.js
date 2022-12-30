@@ -1,33 +1,48 @@
-const $orbcursor = $('.orbcursor');
+const orbcursor = $('.orbcursor');
 
 $('html').one('mousemove', function () {
-  $orbcursor.removeClass('animoff')
-  $orbcursor.addClass('animactive')
-  $orbcursor.stop().fadeIn('fast')
+  orbcursor.removeClass('animoff')
+  orbcursor.addClass('animactive')
+  orbcursor.stop().fadeIn('fast')
 })
 $('html').hover(function () {
-  $orbcursor.removeClass('animoff')
-  $orbcursor.addClass('animactive')
-  $orbcursor.stop().fadeIn('fast')
+  orbcursor.removeClass('animoff')
+  orbcursor.addClass('animactive')
+  orbcursor.stop().fadeIn('fast')
 })
 $('html').mouseleave(function () {
-  $orbcursor.removeClass('hoveringattr')
-  $orbcursor.removeClass('idle')
-  $orbcursor.removeClass('animactive')
-  $orbcursor.addClass('animoff')
-  $orbcursor.stop().fadeOut('fast')
-})
-$('a').mouseenter(function () {
-  $orbcursor.removeClass('idle')
-  $orbcursor.removeClass('animactive')
-  $orbcursor.addClass('hoveringattr')
-})
-$('a').mouseleave(function () {
-  $orbcursor.removeClass('hoveringattr')
-  $orbcursor.addClass('animactive')
-  $orbcursor.addClass('idle')
+  orbcursor.removeClass('hoveringattr')
+  orbcursor.removeClass('idle')
+  orbcursor.removeClass('animactive')
+  orbcursor.addClass('animoff')
+  orbcursor.stop().fadeOut('fast')
 })
 
+function react (){
+  orbcursor.removeClass('idle')
+  orbcursor.removeClass('animactive')
+  orbcursor.addClass('hoveringattr')
+}
+function idle (){
+  orbcursor.removeClass('hoveringattr')
+  orbcursor.addClass('animactive')
+  orbcursor.addClass('idle')
+}
+$('a').mouseenter(function () {
+  react();
+})
+$('a').mouseleave(function () {
+  idle();
+})
+document.getElementById("daImg").addEventListener("galleryLoaded", (function (e) {
+  //reactive elements are a hassle :)
+  $('[orbReact = true]').mouseenter(function () {
+    react();
+  })
+  $('[orbReact = true]').mouseleave(function () {
+    idle();
+  })
+}));
 const cursor = document.querySelector('.orbcursor');
 
 let mouseX = 0;

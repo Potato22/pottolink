@@ -582,9 +582,11 @@ a:link, a:visited {
 }
 
 .orbcursor {
+  --orbsize: 10px;
+  --growScale: 10;
+  --offset: -.5px;
   display: none;
   position: fixed;
-  --orbsize: 10px;
   width: var(--orbsize);
   height: var(--orbsize);
   background: white;
@@ -650,7 +652,7 @@ a:link, a:visited {
     transform: scale(1) translate(calc(var(--orbsize) / -2), calc(var(--orbsize) / -2));
   }
   to {
-    transform: scale(15) translate(-0.5px, -0.5px);
+    transform: scale(var(--growScale)) translate(var(--offset), var(--offset));
   }
 }
 
@@ -659,7 +661,7 @@ a:link, a:visited {
     transform: scale(1) translate(calc(var(--orbsize) / -2), calc(var(--orbsize) / -2));
   }
   to {
-    transform: scale(15) translate(-0.5px, -0.5px);
+    transform: scale(var(--growScale)) translate(var(--offset), var(--offset));
   }
 }
 .idle {
@@ -669,7 +671,7 @@ a:link, a:visited {
 
 @-webkit-keyframes idle {
   from {
-    transform: scale(15) translate(-0.5px, -0.5px);
+    transform: scale(var(--growScale)) translate(var(--offset), var(--offset));
   }
   to {
     transform: scale(1) translate(calc(var(--orbsize) / -2), calc(var(--orbsize) / -2));
@@ -678,7 +680,7 @@ a:link, a:visited {
 
 @keyframes idle {
   from {
-    transform: scale(15) translate(-0.5px, -0.5px);
+    transform: scale(var(--growScale)) translate(var(--offset), var(--offset));
   }
   to {
     transform: scale(1) translate(calc(var(--orbsize) / -2), calc(var(--orbsize) / -2));
