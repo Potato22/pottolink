@@ -1,5 +1,4 @@
 (() => {
-
     const getChildTags = (dom, name) => Array.from(dom.children).filter(c => c.tagName === name);
     const getChildTag = (dom, name) => Array.from(dom.children).find(c => c.tagName === name);
 
