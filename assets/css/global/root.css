@@ -6,10 +6,7 @@ body {
   max-width: 100%;
   background: var(--baseD);
   overflow-x: hidden;
-  -webkit-user-select: none !important;
-     -moz-user-select: none !important;
-      -ms-user-select: none !important;
-          user-select: none !important;
+  user-select: none !important;
 }
 
 /* ############################### */
@@ -136,7 +133,6 @@ a:link, a:visited {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem 0 0;
   z-index: 1;
   background: var(--alphabaseD);
   -webkit-backdrop-filter: blur(6px);
@@ -229,8 +225,7 @@ a:link, a:visited {
   height: 100vh;
   display: grid;
   place-items: center;
-  -webkit-animation: contentdialog 0.8s forwards var(--sleek);
-          animation: contentdialog 0.8s forwards var(--sleek);
+  animation: contentdialog 0.8s forwards var(--sleek);
   opacity: 0;
   transition: all 0.3s var(--accel);
   transform: scale(1.5);
@@ -491,8 +486,7 @@ a:link, a:visited {
   height: 70px;
   /*border: black 2px;*/
   border-radius: 50%;
-  -webkit-animation: spinouter 2s cubic-bezier(0.08, 0.22, 0, 0.99) infinite;
-          animation: spinouter 2s cubic-bezier(0.08, 0.22, 0, 0.99) infinite;
+  animation: spinouter 2s cubic-bezier(0.08, 0.22, 0, 0.99) infinite;
   transition: border 0.2s cubic-bezier(0.66, 0.02, 0.88, 0.32);
   border-color: rgba(0, 0, 0, 0);
 }
@@ -502,33 +496,8 @@ a:link, a:visited {
   height: 30px;
   position: absolute;
   border-radius: 50%;
-  -webkit-animation: spinouter 2s cubic-bezier(0.08, 0.22, 0, 0.99) 1.5s infinite;
-          animation: spinouter 2s cubic-bezier(0.08, 0.22, 0, 0.99) 1.5s infinite;
+  animation: spinouter 2s cubic-bezier(0.08, 0.22, 0, 0.99) 1.5s infinite;
   border-color: rgba(0, 0, 0, 0);
-}
-
-@-webkit-keyframes spinouter {
-  0% {
-    transform: rotate(0deg);
-    border: solid var(--accentD) 4px;
-  }
-  25% {
-    transform: rotate(90deg);
-    border: solid var(--blackfL) 20px;
-  }
-  50% {
-    transform: rotate(180deg);
-    border: solid var(--blackfL) 10px;
-    border-radius: 0px;
-  }
-  75% {
-    transform: rotate(270deg);
-    border: solid var(--blackfL) 30px;
-  }
-  100% {
-    transform: rotate(360deg);
-    border: solid var(--blackfL) 4px;
-  }
 }
 
 @keyframes spinouter {
@@ -599,17 +568,7 @@ a:link, a:visited {
 }
 
 .animactive {
-  -webkit-animation: orbactive 0.5s forwards var(--sleek);
-          animation: orbactive 0.5s forwards var(--sleek);
-}
-
-@-webkit-keyframes orbactive {
-  from {
-    transform: scale(5);
-  }
-  to {
-    transform: scale(1) translate(calc(var(--orbsize) / -2), calc(var(--orbsize) / -2));
-  }
+  animation: orbactive 0.5s forwards var(--sleek);
 }
 
 @keyframes orbactive {
@@ -621,17 +580,7 @@ a:link, a:visited {
   }
 }
 .animoff {
-  -webkit-animation: animoff 1s forwards var(--sleek);
-          animation: animoff 1s forwards var(--sleek);
-}
-
-@-webkit-keyframes animoff {
-  from {
-    transform: scale(1) translate(calc(var(--orbsize) / -2), calc(var(--orbsize) / -2));
-  }
-  to {
-    transform: scale(0);
-  }
+  animation: animoff 1s forwards var(--sleek);
 }
 
 @keyframes animoff {
@@ -643,17 +592,7 @@ a:link, a:visited {
   }
 }
 .hoveringattr {
-  -webkit-animation: hovering 0.5s forwards var(--sleek);
-          animation: hovering 0.5s forwards var(--sleek);
-}
-
-@-webkit-keyframes hovering {
-  from {
-    transform: scale(1) translate(calc(var(--orbsize) / -2), calc(var(--orbsize) / -2));
-  }
-  to {
-    transform: scale(var(--growScale)) translate(var(--offset), var(--offset));
-  }
+  animation: hovering 0.5s forwards var(--sleek);
 }
 
 @keyframes hovering {
@@ -665,17 +604,7 @@ a:link, a:visited {
   }
 }
 .idle {
-  -webkit-animation: idle 0.5s forwards var(--sleek);
-          animation: idle 0.5s forwards var(--sleek);
-}
-
-@-webkit-keyframes idle {
-  from {
-    transform: scale(var(--growScale)) translate(var(--offset), var(--offset));
-  }
-  to {
-    transform: scale(1) translate(calc(var(--orbsize) / -2), calc(var(--orbsize) / -2));
-  }
+  animation: idle 0.5s forwards var(--sleek);
 }
 
 @keyframes idle {
@@ -686,4 +615,6 @@ a:link, a:visited {
     transform: scale(1) translate(calc(var(--orbsize) / -2), calc(var(--orbsize) / -2));
   }
 }
-/*# sourceMappingURL=root.css.map *//*# sourceMappingURL=root.css.map */
+/*# sourceMappingURL=root.css.map */
+
+/*# sourceMappingURL=root.css.map */

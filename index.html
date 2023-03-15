@@ -30,8 +30,13 @@
     <script src="assets/js/orb.js" defer></script>
 
     <script>
+        //var windowH = $(window).width();
+        //console.log(windowH > 740)
+        //if (windowH >= 740) {
+        //}
         $(document).scroll(function () {
             var scrollDistance = $(this).scrollTop();
+            console.log(scrollDistance)
             if (scrollDistance >= 300) {
                 $('.heroimage, .forwardwrap').fadeOut();
                 $('.themetogglecont').css({
@@ -44,7 +49,7 @@
                 });
             }
         });
-    </script>
+        </script>
 </head>
 
 <body>
