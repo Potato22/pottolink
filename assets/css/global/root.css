@@ -6,7 +6,9 @@ body {
   max-width: 100%;
   background: var(--baseD);
   overflow-x: hidden;
-  user-select: none !important;
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+          user-select: none !important;
 }
 
 /* ############################### */
@@ -127,7 +129,6 @@ a:link, a:visited {
 }
 
 .dynamicnav {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   display: flex;
@@ -358,7 +359,6 @@ a:link, a:visited {
   pointer-events: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 .imgs.leftoffset {
@@ -386,7 +386,6 @@ a:link, a:visited {
   align-items: flex-end;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   opacity: 0;
   transition: all 0.2s var(--sleek);
@@ -437,21 +436,7 @@ a:link, a:visited {
 }
 
 .splashanim {
-  -webkit-animation: splash 0.8s var(--sleek);
   animation: splash 0.8s var(--sleek);
-}
-
-@-webkit-keyframes splash {
-  from {
-    transform: scale(0);
-    opacity: 1;
-    border-width: 2;
-  }
-  to {
-    transform: scale(1);
-    opacity: 0;
-    border-width: 1;
-  }
 }
 @keyframes splash {
   from {
@@ -615,6 +600,4 @@ a:link, a:visited {
     transform: scale(1) translate(calc(var(--orbsize) / -2), calc(var(--orbsize) / -2));
   }
 }
-/*# sourceMappingURL=root.css.map */
-
 /*# sourceMappingURL=root.css.map */

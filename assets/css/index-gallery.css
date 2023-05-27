@@ -149,9 +149,9 @@
 
 @media screen and (max-width: 740px) {
   #hello,
-#fader,
-.forwardattrwrap,
-.orbcursor {
+  #fader,
+  .forwardattrwrap,
+  .orbcursor {
     display: none !important;
   }
 }
@@ -187,7 +187,7 @@
   grid-template-columns: repeat(2, minmax(300px, 1fr));
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-auto-rows: 300px;
-  max-width: 80%;
+  width: 80%;
   padding: 4rem 0;
 }
 
@@ -329,33 +329,26 @@ a.linkcard::before {
   .longcard {
     grid-row: span 1/auto;
   }
-
   .extralongcard {
     grid-column: span 1/auto;
   }
-
   .bigcard {
     grid-row: span 1/auto;
     grid-column: span 1/auto;
   }
-
   .smallwidecard {
     grid-column: span 1/auto;
   }
-
   .widecard {
     grid-row: span 1/auto;
     grid-column: span 1/auto;
   }
-
   .superwidecard {
     grid-column: span 2/auto;
   }
-
   .widecardp {
     grid-column: span auto/auto;
   }
-
   .mediumwidecard {
     grid-column: span 1/auto;
   }
@@ -370,7 +363,6 @@ a.linkcard::before {
     grid-row: span 1/auto;
     grid-column: span 2/auto;
   }
-
   .ghost {
     display: block;
   }
@@ -380,7 +372,6 @@ a.linkcard::before {
     grid-column: span 2/auto;
     grid-row: span 1/auto;
   }
-
   .dynamic-mediumwide-long {
     grid-column: span 1/auto;
     grid-row: span 2/auto;
@@ -388,11 +379,10 @@ a.linkcard::before {
 }
 @media screen and (max-width: 1090px) {
   .dynamic-long-mediumwide,
-.dynamic-mediumwide-long {
+  .dynamic-mediumwide-long {
     grid-column: span 1/auto;
     grid-row: span 1/auto;
   }
-
   .superwidecard {
     grid-column: span 1/auto;
   }
@@ -470,7 +460,6 @@ a.linkcard::before {
   .titletextcard {
     font-size: 1.5em;
   }
-
   .big {
     font-size: 2.5em;
     font-family: var(--display);
@@ -593,7 +582,6 @@ a.linkcard::before {
 .zoomincontent {
   max-height: 100vh;
   max-width: 100vw;
-  -webkit-animation: zoom 0.5s forwards var(--sleek);
   animation: zoom 0.5s forwards var(--sleek);
 }
 
@@ -604,17 +592,6 @@ a.linkcard::before {
   justify-content: center;
   align-items: center;
   cursor: zoom-out;
-}
-
-@-webkit-keyframes zoom {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
 }
 @keyframes zoom {
   from {
@@ -627,7 +604,5 @@ a.linkcard::before {
   }
 }
 /*IMAGEZOOM-------------------------------*/
-/*# sourceMappingURL=index-gallery.css.map */
-/*# sourceMappingURL=index-gallery.css.map */
 
 /*# sourceMappingURL=index-gallery.css.map */
