@@ -81,7 +81,8 @@ function chapter() {
         triviabool = false;
     }
 
-    console.log('creatbool', createbool, '\n gallbool', gallbool, '\n commbool', commbool, '\n triviabool', triviabool )
+    //console.log('creatbool', createbool, '\n gallbool', gallbool, '\n commbool', commbool, '\n triviabool', triviabool )
+    //console.log('createbool %s, gallbool %s, triviabool %s', createbool, gallbool, triviabool)
 
     if (aboutbool == true) {
         $('.s1').addClass('activestrike')

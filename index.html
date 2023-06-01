@@ -27,7 +27,9 @@
     <link rel="stylesheet" href="assets/css/index-gallery.css">
     <script src="assets/js/navviewport.js" defer></script>
     <script src="assets/js/themetoggle.js" defer></script>
-    <script src="assets/js/orb.js" defer></script>
+
+    <script src="assets/orb/poc.mjs" type="module"></script>
+    <link rel="stylesheet" href="assets/orb/poc.css">
 
     <script>
         //var windowH = $(window).width();
@@ -59,7 +61,7 @@
         <div class="inner"></div>
     </div>
     <!-- orb cursor -->
-    <div class="orbcursor"></div>
+    <orb-cursor speed=".2"></orb-cursor>
     <!-- theme toggle -->
     <div class="themetogglecont">
         <div class="togglecont">
@@ -89,7 +91,7 @@
     <!-- forward -->
     <a class="forwardattrwrap" href="#about">
         <div class="forwardwrap">
-            <div class="forward">
+            <div class="forward" orbReact="true">
                 <div class="capsule">
                     <div class="dot"></div>
                 </div>
