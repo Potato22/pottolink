@@ -279,11 +279,11 @@ a.linkcard::before {
   cursor: pointer;
 }
 
-.longcard {
+.tallcard {
   grid-row: span 2/auto;
 }
 
-.extralongcard {
+.extratallcard {
   grid-row: span 3/auto;
 }
 
@@ -313,11 +313,11 @@ a.linkcard::before {
   grid-column: span 1/auto;
 }
 
-.dynamic-long-mediumwide {
+.dynamic-tall-mediumwide {
   grid-row: span 2/auto;
 }
 
-.dynamic-mediumwide-long {
+.dynamic-mediumwide-tall {
   grid-column: span 2/auto;
 }
 
@@ -326,10 +326,10 @@ a.linkcard::before {
 }
 
 @media screen and (max-width: 1366px) {
-  .longcard {
+  .tallcard {
     grid-row: span 1/auto;
   }
-  .extralongcard {
+  .extratallcard {
     grid-column: span 1/auto;
   }
   .bigcard {
@@ -352,6 +352,9 @@ a.linkcard::before {
   .mediumwidecard {
     grid-column: span 1/auto;
   }
+  .dynamic-narrowvp-wide-tall {
+    grid-column: span 2/auto;
+  }
 }
 @media screen and (max-width: 700px) {
   .read {
@@ -367,24 +370,28 @@ a.linkcard::before {
     display: block;
   }
 }
-@media screen and (max-width: 1367px) {
-  .dynamic-long-mediumwide {
+@media screen and (max-width: 1784px) {
+  .dynamic-tall-mediumwide {
     grid-column: span 2/auto;
     grid-row: span 1/auto;
   }
-  .dynamic-mediumwide-long {
+  .dynamic-mediumwide-tall {
     grid-column: span 1/auto;
     grid-row: span 2/auto;
   }
 }
 @media screen and (max-width: 1090px) {
-  .dynamic-long-mediumwide,
-  .dynamic-mediumwide-long {
+  .dynamic-tall-mediumwide,
+  .dynamic-mediumwide-tall {
     grid-column: span 1/auto;
     grid-row: span 1/auto;
   }
   .superwidecard {
     grid-column: span 1/auto;
+  }
+  .dynamic-narrowvp-wide-tall {
+    grid-column: span 2/auto;
+    grid-row: span 2/auto;
   }
 }
 /*textcard--------------------------------*/
@@ -426,12 +433,12 @@ a.linkcard::before {
   font-weight: 900;
 }
 
-.longtext {
+.talltext {
   font-size: 1.2em;
   font-family: var(--contentsecondary);
 }
 
-.longtextread {
+.talltextread {
   font-family: var(--content);
   line-height: 1.7;
   font-size: 1.15em;
