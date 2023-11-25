@@ -301,6 +301,7 @@ a:link, a:visited {
 }
 
 .go {
+  margin-right: 1rem;
   padding: 10px 10px 10px 15px;
   color: var(--textD);
   box-sizing: border-box;
