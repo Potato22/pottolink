@@ -208,7 +208,7 @@
   box-shadow: var(--boxshadowD);
 }
 
-a.linkcard {
+.linkcard {
   text-align: center;
   display: flex;
   align-items: center;
@@ -216,28 +216,34 @@ a.linkcard {
   overflow: visible;
   transition: all 0.5s var(--sleek) !important;
 }
-a.linkcard:hover {
+.linkcard:hover {
   background: var(--accentD);
   transform: scale(1.1) rotate(3deg) !important;
 }
-a.linkcard:hover .dynamicarrow {
+.linkcard:hover .dynamicarrow {
   margin-left: 10px;
 }
-a.linkcard:hover .line {
+.linkcard:hover .line {
   opacity: 1;
 }
-a.linkcard:hover .arrow {
+.linkcard:hover .arrow {
   transform: translateX(3px);
 }
-a.linkcard:hover .textcard {
+.linkcard:hover .textcard {
   color: var(--textfL);
 }
-a.linkcard:hover::before {
+.linkcard:hover.linkreturn:hover {
+  background: var(--red1);
+}
+.linkcard:hover::before {
   background: var(--accentsecondaryD);
   opacity: 1;
   transform: scale(0.9) rotate(-5deg) !important;
 }
-a.linkcard::before {
+.linkcard:hover.linkreturn::before {
+  background: var(--redsecondary);
+}
+.linkcard::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -399,6 +405,7 @@ a.linkcard::before {
   padding: 1rem;
   font-family: var(--content);
   font-size: 2em;
+  color: var(--textD);
 }
 
 .titletextcard {
@@ -409,49 +416,57 @@ a.linkcard::before {
   border-bottom: solid var(--textD) 1px;
 }
 
-.medium {
+/*sizes*/
+.tcmedium {
   font-size: 2em;
   font-family: var(--display);
   font-weight: 500;
 }
 
-.big {
+.tcbig {
   font-size: 3em;
   font-family: var(--display);
   font-weight: 500;
 }
 
-.bigger {
+.tcbigger {
   font-size: 3.6em;
   font-family: var(--display);
   font-weight: 900;
 }
 
-.huge {
+.tchuge {
   font-size: 7em;
   font-family: var(--display);
   font-weight: 900;
 }
 
-.talltext {
+.tcreg {
   font-size: 1.2em;
   font-family: var(--contentsecondary);
 }
 
-.talltextread {
+.tcregread {
   font-family: var(--content);
   line-height: 1.7;
   font-size: 1.15em;
+  font-weight: 500;
 }
 
-.subquote {
+.tcsmall {
+  font-family: var(--content);
+  line-height: 1.7;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.tcsubquote {
   font-family: var(--contentsecondary);
   font-size: 1rem;
   font-style: italic;
-  color: var(--textsecondaryD);
 }
 
-.quotation {
+.tcquotation {
   font-family: var(--contentsecondary);
   font-size: 1rem;
   font-style: italic;
@@ -565,6 +580,10 @@ a.linkcard::before {
   cursor: pointer;
 }
 
+.imgz {
+  cursor: pointer;
+}
+
 .zoomindimmer {
   position: fixed;
   top: 0;
@@ -587,18 +606,41 @@ a.linkcard::before {
 }
 
 .zoomincontent {
-  max-height: 100vh;
+  max-height: 95vh;
   max-width: 100vw;
   animation: zoom 0.5s forwards var(--sleek);
+}
+
+.zoomalttext {
+  max-width: 60vw;
+  text-align: center;
+  font-family: var(--content);
+  background: var(--blackfL);
+  color: var(--textfL);
+  margin: 0.3em 1rem 0.5em 1rem;
+  animation: zoom 0.5s forwards var(--sleek);
+  padding: 0.2rem 1rem;
+  border-radius: 10px;
+  font-weight: 800;
+  font-family: var(--contentsecondary);
+}
+
+.zoomaltlink {
+  color: var(--accentD) !important;
 }
 
 .zoomincontentAlign {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: zoom-out;
+}
+
+.zoomDisable {
+  display: none;
 }
 @keyframes zoom {
   from {
