@@ -35,16 +35,17 @@ function chapter() {
     var gall = $('#gall').offset().top - $(window).scrollTop();
     var comm = $('#comm').offset().top - $(window).scrollTop();
     var trivia = $('#trivia').offset().top - $(window).scrollTop();
+    var extra = $('#threed').offset().top - $(window).scrollTop();
     
     
 
     //BOOL
     var aboutbool;
     var createbool;
-    var contactbool;
     var gallbool;
     var commbool;
     var triviabool;
+    var extrabool;
 
     if (about <= 0) {
         aboutbool = true;
@@ -56,33 +57,39 @@ function chapter() {
     if (create <= 0) {
         createbool = true;
         aboutbool = false;
-        //console.log("create active")
     } else {
         createbool = false;
     }
+
     if (gall <= 0) {
         gallbool = true;
-        //console.log("create active")
     } else {
         gallbool = false;
     }
+
     if (comm <= 0) {
         commbool = true;
         gallbool = false;
-        //console.log("create active")
     } else {
         commbool = false;
     }
+
     if (trivia <= 0) {
         triviabool = true;
         commbool = false;
-        //console.log("create active")
     } else {
         triviabool = false;
     }
 
-    //console.log('creatbool', createbool, '\n gallbool', gallbool, '\n commbool', commbool, '\n triviabool', triviabool )
-    //console.log('createbool %s, gallbool %s, triviabool %s', createbool, gallbool, triviabool)
+    if (extra <= 0) {
+        extrabool = true;
+        triviabool = false;
+    } else {
+        extrabool = false;
+    }
+
+    console.log('creatbool', createbool, '\n gallbool', gallbool, '\n commbool', commbool, '\n triviabool', triviabool, '\n extrabool', extrabool )
+    //console.log('createbool %s, gallbool %s, triviabool %s', createbool, gallbool, triviabool, extrabool)
 
     if (aboutbool == true) {
         $('.s1').addClass('activestrike')
@@ -113,11 +120,10 @@ function chapter() {
         $('.s2-3').removeClass('blockactive')
     }
 
-
-    if (contactbool == true) {
-        $('.s3').addClass('activestrike')
+    if (extrabool == true) {
+        $('.s2-4').addClass('blockactive')
     } else {
-        $('.s3').removeClass('activestrike')
+        $('.s2-4').removeClass('blockactive')
     }
 }
 chapter();

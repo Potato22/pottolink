@@ -38,7 +38,7 @@
         //}
         $(document).scroll(function () {
             var scrollDistance = $(this).scrollTop();
-            console.log(scrollDistance)
+            //console.log(scrollDistance)
             if (scrollDistance >= 300) {
                 $('.heroimage, .forwardwrap').fadeOut();
                 $('.themetogglecont').css({
@@ -77,7 +77,7 @@
             <div style="background-image:url(assets/img/content/road.jpg)"></div>
             <div style="background-image:url(assets/img/content/warmsnow.jpg)"></div>
             <div style="background-image:url(assets/img/content/cityscape.jpg)"></div>
-            <div style="background-image:url(assets/img/content/kaktus.jpg)"></div>
+            <div style="background-image:url(assets/img/content/kaktus.jpg)" class="topoffset"></div>
         </div>
         <div class="hero">
             <div class="theactualhello" data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-right">Potto
@@ -116,7 +116,11 @@
                     </div>
                 </a>
                 <a href="#trivia">
-                    <div class="sket cbutton block s2-3">Trivia
+                    <div class="sket cbutton block s2-3">TRIVIA
+                    </div>
+                </a>
+                <a href="#threed">
+                    <div class="extra cbutton block s2-4">EXTRA
                     </div>
                 </a>
             </div>
@@ -127,7 +131,11 @@
     <div class="zoomindimmer"></div>
     <div class="zoomin">
         <div class="zoomincontentAlign">
-            <img class="zoomincontent" src="">
+            <div class="zoomDisplay">
+                <img class="zoomincontent" src="">
+                <video autoplay loop class="zoomincontent" src="">
+            </div>
+            <div class="zoomalttext"></div>
         </div>
     </div>
 
@@ -359,16 +367,19 @@
                     </div>
                 </div>
                 <div data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-left"
-                class="cards textcard invis tcreg">Extra Links
+                    class="cards textcard invis tcreg">Extra Links
                     <ul>
                         <li>
                             <a style="color: var(--accentD); font-weight: 600;" href="#comm">Commission</a>
                         </li>
                         <li>
-                            <a style="color: var(--accentD); font-weight: 600;" href="https://pottoboard.notion.site/fa777b6bc70d42c69b190b1206e2b12e?  v=bee67dac28f54c64a0b7e0610d41a18c">Commission List</a>
+                            <a style="color: var(--accentD); font-weight: 600;"
+                                href="https://pottoboard.notion.site/fa777b6bc70d42c69b190b1206e2b12e?  v=bee67dac28f54c64a0b7e0610d41a18c">Commission
+                                List</a>
                         </li>
                         <li>
-                            <a style="color: var(--accentD); font-weight: 600;" href="https://potato22.github.io/retroux">???????</a>
+                            <a style="color: var(--accentD); font-weight: 600;"
+                                href="https://potato22.github.io/retroux">???????</a>
                         </li>
                     </ul>
                 </div>
@@ -529,7 +540,8 @@
                                     </svg>
                                 </div>
                             </a>
-                            <a target="_blank" href="https://docs.google.com/document/d/1lBEODK4Ib4ur2lEM0CUKOIRh8_tKRUjZPEcFu4TsMXg/edit?usp=sharing">
+                            <a target="_blank"
+                                href="https://docs.google.com/document/d/1lBEODK4Ib4ur2lEM0CUKOIRh8_tKRUjZPEcFu4TsMXg/edit?usp=sharing">
                                 <div class="go">Check her Wiki (?)
                                     <svg class="dynamicarrow" viewBox="0 0 10 10">
                                         <g>
@@ -545,6 +557,76 @@
                 <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards mediumwidecard">
                     <img class="imgs topoffset" src="assets/img/content/mary.jpg">
                 </div>
+            </div>
+            <!-- CARDGRID -->
+            <div id="threed" class="anchor"></div>
+            <div class="cardgrid">
+                <div class="cards invis textcard superwidecard">
+                    <del>The end of page</del> Might as well add...<br>
+                    <div class="titletextcard">(THREE)D</div>
+                    <div class="tcsubquote">::Millions of vertices are extruded, probably.</div>
+                </div>
+                <video autoplay muted loop data-aos="zoom-in"
+                    class="imgs imgz cards imgcard aos-init aos-animate bigcard" orbreact="true"
+                    src="assets/img/content/3d/neonixEasy.webm"
+                    alt="An advert-like presentation of a custom nixie tube clock design."></video>
+                <video autoplay muted loop data-aos="zoom-in" class="imgs imgz cards imgcard aos-init aos-animate"
+                    orbreact="true" src="assets/img/content/3d/curt.webm"
+                    alt="Fabric curtain simulation demo in an indoor setting."></video>
+                <img data-aos="zoom-in" class="imgs imgz cards imgcard aos-init aos-animate" orbreact="true"
+                    src="assets/img/content/3d/qublast.jpg"
+                    alt="'QUBLAST' Inspired by the hacking tool alike 'FLipper Zero' combined with a mini oscilloscope multimeter/multitool.">
+                <img data-aos="zoom-in" class="imgs imgz cards imgcard aos-init aos-animate mediumwidecard topoffset"
+                    orbreact="true" src="assets/img/content/3d/muzen.jpg"
+                    alt="A love letter to Muzen's 'Wild Jeep' Bluetooth speaker design bonus with a pile of my nixie tube models next to it.">
+                <img data-aos="zoom-in" class="imgs imgz cards imgcard aos-init aos-animate" orbreact="true"
+                    src="assets/img/content/3d/wacom.jpg"
+                    alt="A high-detail modeling challenge of a Wacom Intuos Mini.">
+                <video autoplay muted loop data-aos="zoom-in"
+                    class="imgs imgz cards imgcard aos-init aos-animate mediumwidecard" orbreact="true"
+                    src="assets/img/content/3d/coolfab.webm"
+                    alt="A more extensive fabric simulation with added detail, very very 'added' detail."></video>
+                <video autoplay muted loop data-aos="zoom-in" class="imgs imgz cards imgcard aos-init aos-animate"
+                    orbreact="true" src="assets/img/content/3d/neonix.webm"
+                    alt="'Neo-Classic' Design Nixie tube clock with functioning controller."></video>
+                <img data-aos="zoom-in" class="imgs imgz cards imgcard aos-init aos-animate" orbreact="true"
+                    src="assets/img/content/3d/rob.jpg" alt="Modelling challenge of a spherical robot.">
+                <img data-aos="zoom-in" class="imgs imgz cards imgcard aos-init aos-animate widecard" orbreact="true"
+                    src="assets/img/content/3d/veh.jpg"
+                    alt="Modelling challenge to create an exotic vehicle, probably for antartic - or just another planet...">
+            </div>
+            <!-- CARDGRID -->
+            <div id="design" class="anchor"></div>
+            <div class="cardgrid">
+                <div class="cards invis textcard superwidecard">
+                    <div class="titletextcard">Design and Motion Graphics</div>
+                    <div class="tcsubquote">::oh no it's 2 pixels off.</div>
+                </div>
+                <video autoplay muted loop data-aos="zoom-in" class="imgs imgz cards imgcard aos-init aos-animate"
+                    orbreact="true" src="assets/img/content/modesig/c.webm"
+                    alt="Motion design improvisation out of a letter 'C'."></video>
+                <video autoplay muted loop data-aos="zoom-in" class="imgs imgz cards imgcard aos-init aos-animate"
+                    orbreact="true" src="assets/img/content/modesig/retroux.webm"
+                    alt="<a target='_blank' class='zoomaltlink' href='https://www.youtube.com/watch?v=JW4epapyoT4'>(View full here!)</a><br>It looks horrid in quality (And small!), but not unintentional. It is infact to emulate the old school screen capture of a Nintendo DS back in the days of YouTube. The 'UX' itself in the background isn't from any real game. It simply is a mockup of a UX/UI for an NDS game I completely made up. -- Music is <a target='_blank' class='zoomaltlink' href='https://www.youtube.com/watch?v=uzSgbomtdcg'>Configuration by DV-i</a>"></video>
+                <video autoplay muted loop data-aos="zoom-in"
+                    class="imgs imgz cards imgcard aos-init aos-animate bigcard reducevol" orbreact="true"
+                    src="assets/img/content/modesig/moonlight.webm"
+                    alt="<a target='_blank' class='zoomaltlink' href='https://www.youtube.com/watch?v=Mh1vdgCz-ww'>(View full here!)<br></a> Unconventional dynamic music visualizer out of the song <a target='_blank' class='zoomaltlink' href='https://www.youtube.com/watch?v=-IjbWJwj0Wc'>'Moonlight' by 7dB</a>, syncing the song by a literal bpm clock on the bottom left I added. and add several unique quirks on some synth instruments or song progression."></video>
+                <video autoplay muted loop data-aos="zoom-in"
+                    class="imgs imgz cards imgcard aos-init aos-animate mediumwidecard" orbreact="true"
+                    src="assets/img/content/modesig/ps5.webm"
+                    alt="This is a mockup of Sony's PS5 UX/UI when a crash of a game occurs. All the artifacts are part of the video."></video>
+                <video autoplay muted loop data-aos="zoom-in" class="imgs imgz cards imgcard aos-init aos-animate"
+                    orbreact="true" src="assets/img/content/modesig/jh.webm"
+                    alt="One day I woke up and decided to make my good friend an animated logo out of nowhere."></video>
+                <video autoplay muted loop data-aos="zoom-in"
+                    class="imgs imgz cards imgcard aos-init aos-animate mediumwidecard" orbreact="true"
+                    src="assets/img/content/modesig/1000.mp4"
+                    alt="This was created to celebrate my social media followers reaching and above 1000, followed with me launching a free vector art raffle for a selected few people."></video>
+                <video autoplay muted loop data-aos="zoom-in" class="imgs imgz cards imgcard aos-init aos-animate"
+                    orbreact="true" src="assets/img/content/modesig/EP.webm"
+                    alt="This is part of an EP (Extended Playlist) songs (yes I occassionally make music too sometimes.) I published that's still a big part of my heart."></video>
+
             </div>
             <script src="assets/js/lib/dagallery.js"></script>
             <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
