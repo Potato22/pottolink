@@ -14,7 +14,6 @@ $(function () {
     }).on("resize", function () { // read window size change
         winH = $(this).height(); // update height value
     });
-
 });
 $(function () {
     $('.creation').click(function () {
