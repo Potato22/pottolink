@@ -15,7 +15,7 @@
         }))
     }
 
-    window.daGallery = function (element, username, galleryId) {
+    daGallery = function (element, username, galleryId) {
         //CHANGE THE AMOUNT OF IMAGES TO DISPLAY BY CHANGING $limit=<num>
         //IMAGE LIMIT IS 60
         const url = `https://backend.deviantart.com/rss.xml?q=gallery:${username}/${galleryId}&limit=12`
@@ -39,7 +39,7 @@
     }
 
     // Convinient data-based init
-    window.addEventListener('DOMContentLoaded', () => {
+    addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('[data-da-gallery]').forEach(e => {
             const data = e.dataset.daGallery.split("/")
             daGallery(e, data[0], data[1])
