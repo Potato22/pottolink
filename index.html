@@ -24,12 +24,11 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <link rel="stylesheet" href="assets/css/global/root.css">
-    <link rel="stylesheet" href="assets/css/index-gallery.css">
+    <link rel="stylesheet" href="assets/css/index.css">
     <script src="assets/js/navviewport.js" defer></script>
     <script src="assets/js/themetoggle.js" defer></script>
 
-    <script src="https://potato22.github.io/PortableOrbCursor/orb/poc.mjs" type="module"></script>
-    <link rel="stylesheet" href="https://potato22.github.io/PortableOrbCursor/orb/poc.css">
+    <script src="/assets/orb/poc.mjs" type="module"></script>
 
     <script>
         //var windowH = $(window).width();
@@ -550,7 +549,8 @@
                 </div>
             </div>
             <!-- EXTRA -->
-            <div class="openExtraButton">
+
+            <div class="openExtraButton" orbreact="true">
                 <div class="openExtraTitle">See more goodies ...</div>
             </div>
             <div class="extraWrap" style="display: none;">
@@ -633,12 +633,18 @@
 
                 </div>
             </div>
-            <script src="assets/js/lib/dagallery.js"></script>
+            <!-- <script src="assets/js/lib/dagallery.js"></script> -->
             <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
             <script src="assets/js/lib/aosconfig.js" defer></script>
             <script src="assets/js/lib/smooth-scroll.js"></script>
             <script src="assets/js/zoomtrigger.js"></script>
 
+            <script>
+                $('.openExtraButton').click(function () {
+                    $(this).addClass('opensExtraforU')
+                    $('.extraWrap').show()
+                });
+            </script>
             <script>
                 var scroll = new SmoothScroll('a[href*="#"]', {
                     speed: 800,

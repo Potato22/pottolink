@@ -31,11 +31,11 @@ class CursorOrbElement extends HTMLElement {
     };
 
     this._cancelMoveToPointer();
-    let ele = this.attachShadow({ mode: "closed" });
+    let orbShadowDOM = this.attachShadow({ mode: "closed" });
 
-    ele.appendChild(linkElem.cloneNode(true));
-    ele.appendChild(template.content.cloneNode(true));
-    this._cursor = ele.querySelector(".orbcursor");
+    orbShadowDOM.appendChild(linkElem.cloneNode(true));
+    orbShadowDOM.appendChild(template.content.cloneNode(true));
+    this._cursor = orbShadowDOM.querySelector(".orbcursor");
     this.cursor.style.removeProperty("opacity");
 
     // Register events
@@ -60,7 +60,7 @@ class CursorOrbElement extends HTMLElement {
   get cursor() {
     return this._cursor;
   }
-
+  
   _cancelMoveToPointer() {
     this._animating = false;
     this._timestamp = -1;
@@ -124,12 +124,12 @@ class CursorOrbElement extends HTMLElement {
     let elesAtThisPoint = document.elementsFromPoint(e.clientX, e.clientY);
     let react = false;
     for (let i = 0; i < elesAtThisPoint.length; i++) {
-      const ele = elesAtThisPoint[i];
+      const orbShadowDOM = elesAtThisPoint[i];
       if (
-        this.observedTags.includes(ele.tagName) ||
-        ele.hasAttribute("orbReact")
+        this.observedTags.includes(orbShadowDOM.tagName) ||
+        orbShadowDOM.hasAttribute("orbReact")
       ) {
-        react = ele;
+        react = orbShadowDOM;
         break;
       }
     }

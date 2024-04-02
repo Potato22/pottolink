@@ -11,6 +11,7 @@
 
 .hero {
   position: relative;
+
   /*margin-right: 40%;*/
   color: var(--white);
 }
@@ -41,49 +42,59 @@
   align-items: center;
   justify-content: center;
   filter: brightness(0.5);
-}
-.heroimage > div {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  animation: heroimage 25s var(--sleek) infinite;
-  opacity: 0;
-  transform: scale(1.2);
+
+  >div {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    animation: heroimage 25s var(--sleek) infinite;
+    opacity: 0;
+    transform: scale(1.2);
+  }
 }
 
 .offsetbottom {
   background-position: bottom !important;
 }
 
-.heroimage > div:nth-child(2) {
-  animation-delay: 5s;
-}
-.heroimage > div:nth-child(3) {
-  animation-delay: 10s;
-}
-.heroimage > div:nth-child(4) {
-  animation-delay: 15s;
-}
-.heroimage > div:nth-child(5) {
-  animation-delay: 20s;
+.heroimage>div {
+  &:nth-child(2) {
+    animation-delay: 5s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: 10s;
+  }
+
+  &:nth-child(4) {
+    animation-delay: 15s;
+  }
+
+  &:nth-child(5) {
+    animation-delay: 20s;
+  }
 }
 
 @keyframes heroimage {
   10% {
     opacity: 1;
   }
+
   20% {
     opacity: 1;
   }
+
   30% {
     opacity: 0;
   }
+
   40% {
     transform: scale(1);
   }
 }
+
 .heroimg {
   position: relative;
   width: 100vw;
@@ -128,18 +139,22 @@
   0% {
     opacity: 0;
   }
+
   25% {
     transform: translateY(5px);
     opacity: 1;
   }
+
   50% {
     transform: translateY(20px);
   }
+
   100% {
     opacity: 0;
     transform: translateY(20px);
   }
 }
+
 #fader {
   position: relative;
   width: 100%;
@@ -148,6 +163,7 @@
 }
 
 @media screen and (max-width: 740px) {
+  //remove Hero
   #hello,
   #fader,
   .forwardattrwrap,
@@ -155,6 +171,7 @@
     display: none !important;
   }
 }
+
 .mainboxfloater {
   display: flex;
   justify-content: center;
@@ -175,11 +192,13 @@
     padding: 3rem;
   }
 }
+
 @media screen and (max-width: 580px) {
   .mainbox {
     padding: 0rem;
   }
 }
+
 .cardgrid {
   display: grid;
   gap: 1.5rem;
@@ -196,6 +215,7 @@
             grid-template-columns: repeat(1, 1fr);
         }
     } */
+
 .cards {
   position: relative;
   color: var(--textD);
@@ -215,44 +235,53 @@
   justify-content: center;
   overflow: visible;
   transition: all 0.5s var(--sleek) !important;
-}
-.linkcard:hover {
-  background: var(--accentD);
-  transform: scale(1.1) rotate(3deg) !important;
-}
-.linkcard:hover .dynamicarrow {
-  margin-left: 10px;
-}
-.linkcard:hover .line {
-  opacity: 1;
-}
-.linkcard:hover .arrow {
-  transform: translateX(3px);
-}
-.linkcard:hover .textcard {
-  color: var(--textfL);
-}
-.linkcard:hover.linkreturn:hover {
-  background: var(--red1);
-}
-.linkcard:hover::before {
-  background: var(--accentsecondaryD);
-  opacity: 1;
-  transform: scale(0.9) rotate(-5deg) !important;
-}
-.linkcard:hover.linkreturn::before {
-  background: var(--redsecondary);
-}
-.linkcard::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: black;
-  position: absolute;
-  z-index: -1;
-  transition: all 0.5s var(--sleek);
-  opacity: 0;
-  border-radius: 20px;
+
+  &:hover {
+    background: var(--accentD);
+    transform: scale(1.1) rotate(3deg) !important;
+
+    .dynamicarrow {
+      margin-left: 10px;
+    }
+
+    .line {
+      opacity: 1;
+    }
+
+    .arrow {
+      transform: translateX(3px);
+    }
+
+    .textcard {
+      color: var(--textfL);
+    }
+
+    &.linkreturn:hover {
+      background: var(--red1);
+    }
+
+    &::before {
+      background: var(--accentsecondaryD);
+      opacity: 1;
+      transform: scale(0.9) rotate(-5deg) !important;
+    }
+
+    &.linkreturn::before {
+      background: var(--redsecondary);
+    }
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: black;
+    position: absolute;
+    z-index: -1;
+    transition: all 0.5s var(--sleek);
+    opacity: 0;
+    border-radius: 20px;
+  }
 }
 
 .col {
@@ -335,72 +364,91 @@
   .tallcard {
     grid-row: span 1/auto;
   }
+
   .extratallcard {
     grid-column: span 1/auto;
   }
+
   .bigcard {
     grid-row: span 1/auto;
     grid-column: span 1/auto;
   }
+
   .smallwidecard {
     grid-column: span 1/auto;
   }
+
   .widecard {
     grid-row: span 1/auto;
     grid-column: span 1/auto;
   }
+
   .superwidecard {
     grid-column: span 2/auto;
   }
+
   .widecardp {
     grid-column: span auto/auto;
   }
+
   .mediumwidecard {
     grid-column: span 1/auto;
   }
+
   .dynamic-narrowvp-wide-tall {
     grid-column: span 2/auto;
   }
 }
+
 @media screen and (max-width: 700px) {
   .read {
     grid-row: span 2/auto;
   }
 }
+
 @media screen and (min-width: 1785px) {
   .dynamicUpscale-small-mediumwide {
     grid-row: span 1/auto;
     grid-column: span 2/auto;
   }
+
   .ghost {
     display: block;
   }
 }
+
 @media screen and (max-width: 1784px) {
   .dynamic-tall-mediumwide {
     grid-column: span 2/auto;
     grid-row: span 1/auto;
   }
+
   .dynamic-mediumwide-tall {
     grid-column: span 1/auto;
     grid-row: span 2/auto;
   }
 }
+
 @media screen and (max-width: 1090px) {
+
   .dynamic-tall-mediumwide,
   .dynamic-mediumwide-tall {
     grid-column: span 1/auto;
     grid-row: span 1/auto;
   }
+
   .superwidecard {
     grid-column: span 1/auto;
   }
+
   .dynamic-narrowvp-wide-tall {
     grid-column: span 2/auto;
     grid-row: span 2/auto;
   }
 }
+
 /*textcard--------------------------------*/
+
 .textcard {
   padding: 1rem;
   font-family: var(--content);
@@ -482,19 +530,23 @@
   .titletextcard {
     font-size: 1.5em;
   }
+
   .big {
     font-size: 2.5em;
     font-family: var(--display);
     font-weight: 500;
   }
 }
+
 @media screen and (max-width: 500px) {
   .titletextcard {
     font-size: 1.3em;
   }
 }
+
 /*textcard--------------------------------*/
 /*backgroundtext--------------------------*/
+
 .textcontainer {
   position: relative;
   max-width: 100%;
@@ -528,6 +580,7 @@
 
 /*backgroundtext--------------------------*/
 /*thumbnailcard---------------------------*/
+
 .thumbtextcontainer {
   position: relative;
   max-width: 100%;
@@ -551,13 +604,16 @@
 
 /*thumbnailcard---------------------------*/
 /*customs---------------------------------*/
+
 .variable {
   font-weight: 700;
   transition: all 1s var(--sleek);
+
+  &:hover {
+    font-weight: 800;
+  }
 }
-.variable:hover {
-  font-weight: 800;
-}
+
 
 .inlineattribute {
   color: var(--accentD) !important;
@@ -579,7 +635,6 @@
 .daImgs {
   cursor: pointer;
 }
-
 .imgz {
   cursor: pointer;
 }
@@ -608,6 +663,7 @@
 .zoomincontent {
   max-height: 95vh;
   max-width: 100vw;
+  -webkit-animation: zoom 0.5s forwards var(--sleek);
   animation: zoom 0.5s forwards var(--sleek);
 }
 
@@ -617,14 +673,13 @@
   font-family: var(--content);
   background: var(--blackfL);
   color: var(--textfL);
-  margin: 0.3em 1rem 0.5em 1rem;
+  margin: .3em 1rem .5em 1rem;
   animation: zoom 0.5s forwards var(--sleek);
-  padding: 0.2rem 1rem;
+  padding: .2rem 1rem;
   border-radius: 10px;
   font-weight: 800;
   font-family: var(--contentsecondary);
 }
-
 .zoomaltlink {
   color: var(--accentD) !important;
 }
@@ -642,16 +697,68 @@
 .zoomDisable {
   display: none;
 }
+
+.extraWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1920px;
+}
+.openExtraButton {
+  position: relative;
+  border: 1px solid var(--textD);
+  font-family: var(--display);
+  color: var(--textD);
+  padding: 1em 20vw;
+  border-radius: 50px;
+  opacity: 1;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s var(--anchorhead);
+  &:hover {
+    background: var(--textD);
+    color: var(--textfL)
+  }
+}
+.opensExtraforU {
+  animation: opensExtraForU 0.5s var(--anchorhead) forwards;
+}
+@keyframes opensExtraForU {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(50px);
+    opacity: 0;
+    display: none;
+  }
+}
+
+@-webkit-keyframes zoom {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 @keyframes zoom {
   from {
     opacity: 0;
     transform: scale(0.95);
   }
+  
   to {
     opacity: 1;
     transform: scale(1);
   }
 }
 /*IMAGEZOOM-------------------------------*/
+
+/*# sourceMappingURL=index-gallery.css.map */
 
 /*# sourceMappingURL=index-gallery.css.map */
