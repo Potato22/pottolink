@@ -650,22 +650,6 @@
   max-width: 1920px;
 }
 
-.openExtraButton {
-  position: relative;
-  border: 1px solid var(--textD);
-  font-family: var(--display);
-  color: var(--textD);
-  padding: 1em 20vw;
-  border-radius: 50px;
-  opacity: 1;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s, transform 0.2s var(--anchorhead);
-}
-.openExtraButton:hover {
-  background: var(--textD);
-  color: var(--textfL);
-}
-
 .opensExtraforU {
   animation: opensExtraForU 0.5s var(--anchorhead) forwards;
 }

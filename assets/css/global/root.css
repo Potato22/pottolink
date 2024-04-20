@@ -123,7 +123,7 @@ a {
 }
 a:link, a:visited {
   text-decoration: none !important;
-  color: initial;
+  color: currentColor;
 }
 
 .material-icons-outlined {
@@ -317,6 +317,39 @@ a:link, a:visited {
   display: flex;
   align-items: center;
   transition: all 0.15s;
+}
+
+.wideGo {
+  position: relative;
+  border: 1px solid var(--textD);
+  font-family: var(--display);
+  color: var(--textD);
+  padding: 1em 20vw;
+  border-radius: 50px;
+  opacity: 1;
+  cursor: pointer;
+  transition: all 0.2s var(--anchorhead);
+}
+.wideGo:hover {
+  background: var(--textD);
+  color: var(--textfL);
+}
+.wideGo:hover .wideGoTitle {
+  color: var(--textfL);
+}
+.wideGo:hover .dynamicarrow {
+  margin-left: 10px;
+  stroke: var(--textfL);
+}
+.wideGo:hover .line {
+  opacity: 1;
+}
+.wideGo:hover .arrow {
+  transform: translateX(3px);
+}
+
+.wideGoTitle {
+  color: var(--textD);
 }
 
 .dynamicarrow {

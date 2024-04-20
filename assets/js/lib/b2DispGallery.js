@@ -66,12 +66,15 @@
                 displayCount.forEach(item => {
                     const img = new Image();
                     const losslessLinko = document.createElement('p');
-                    img.setAttribute('style', 'position: relative; max-width:100%; overflow: hidden;');
+                    img.setAttribute('data-aos', 'zoom-in')
+                    img.setAttribute('class', 'imgs cards imgcard daImgs')
+                    img.setAttribute('orbReact', 'true')
+                    img.setAttribute('loading', 'lazy')
                     img.src = item.urlLossy;
                     img.alt = item.nameLossy; // remove file ext
                     img.dataset.flag = item.nsfw ? 'true' : 'false';
                     img.dataset.sketch = item.sketch ? 'true' : 'false';
-                    
+
                     const matchingLossless = losslessImages.find(x => x.nameLossless === item.nameLossy);
                     if (matchingLossless) {
                         losslessLinko.textContent = 'lossless: ' + matchingLossless.urlLossless;
@@ -82,7 +85,7 @@
                         losslessLinko.textContent = 'No lossless version available';
                         img.dataset.lossless = false;
                     }
-                    
+
                     img.dataset.lossless = losslessImages.find(x => x.nameLossless === item.nameLossy) ?
                         losslessImages.find(x => x.nameLossless === item.nameLossy).urlLossless :
                         false;

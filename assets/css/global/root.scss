@@ -134,7 +134,7 @@ a {
   &:link,
   &:visited {
     text-decoration: none !important;
-    color: initial;
+    color: currentColor;
   }
 }
 
@@ -336,6 +336,43 @@ a {
   display: flex;
   align-items: center;
   transition: all 0.15s;
+}
+
+.wideGo {
+  position: relative;
+  border: 1px solid var(--textD);
+  font-family: var(--display);
+  color: var(--textD);
+  padding: 1em 20vw;
+  border-radius: 50px;
+  opacity: 1;
+  cursor: pointer;
+  transition: all 0.2s var(--anchorhead);
+
+  &:hover {
+    background: var(--textD);
+    color: var(--textfL);
+
+    .wideGoTitle {
+    color: var(--textfL);
+    }
+    .dynamicarrow {
+      margin-left: 10px;
+      stroke: var(--textfL);
+    }
+
+    .line {
+      opacity: 1;
+    }
+
+    .arrow {
+      transform: translateX(3px);
+    }
+  }
+}
+
+.wideGoTitle {
+  color: var(--textD)
 }
 
 .dynamicarrow {
