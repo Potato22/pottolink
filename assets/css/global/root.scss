@@ -354,8 +354,9 @@ a {
     color: var(--textfL);
 
     .wideGoTitle {
-    color: var(--textfL);
+      color: var(--textfL);
     }
+
     .dynamicarrow {
       margin-left: 10px;
       stroke: var(--textfL);
@@ -511,6 +512,7 @@ a {
   animation: splash 0.8s var(--sleek);
 }
 
+
 @-webkit-keyframes splash {
   from {
     transform: scale(0);
@@ -629,4 +631,53 @@ a {
   display: flex;
   width: 100%;
   height: 100vh;
+}
+
+.galleryLoadingInd {
+  position: relative;
+  color: var(--textD);
+  opacity: .5;
+  height: 0;
+  //animation: holdon .5s 12, toolong 6s linear forwards 3s;
+}
+.holdon {
+  animation: holdon .5s infinite
+}
+
+@keyframes holdon {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  12% {
+    transform: translateY(1px);
+  }
+
+  24% {
+    transform: translateY(6px);
+  }
+
+  36% {
+    transform: translateY(15px);
+    opacity: .5;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+}
+
+@keyframes toolong {
+  0% {
+    --loadingDialogue: "Any time now..."
+  }
+
+  100% {
+    --loadingDialogue: "This should still be loading, but is taking concerningly a little while...";
+    opacity: .4;
+
+  }
 }

@@ -570,4 +570,45 @@ a:link, a:visited {
   display: flex;
   width: 100%;
   height: 100vh;
+}
+
+.galleryLoadingInd {
+  position: relative;
+  color: var(--textD);
+  opacity: 0.5;
+  height: 0;
+}
+
+.holdon {
+  animation: holdon 0.5s infinite;
+}
+
+@keyframes holdon {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  12% {
+    transform: translateY(1px);
+  }
+  24% {
+    transform: translateY(6px);
+  }
+  36% {
+    transform: translateY(15px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes toolong {
+  0% {
+    --loadingDialogue: "Any time now..." ;
+  }
+  100% {
+    --loadingDialogue: "This should still be loading, but is taking concerningly a little while...";
+    opacity: 0.4;
+  }
 }/*# sourceMappingURL=root.css.map */
