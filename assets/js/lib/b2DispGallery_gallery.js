@@ -10,7 +10,6 @@
     let allDisplayImages = [];
     let losslessImages = [];
 
-
     async function fetchDisplay() {
         console.log('async fetchDisplay');
         try {
@@ -30,7 +29,7 @@
         }
     }
 
-    function loadImages(start, end, losslessImages) {
+    function loadImages(start, end) {
         const displayCount = allDisplayImages.slice(start, end);
         const latestWorkGrid = document.getElementById('latestWorks');
         const imgDataFragment = document.createDocumentFragment();
@@ -108,7 +107,7 @@
 
                 allDisplayImages.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-                loadImages(0, 8, losslessImages);
+                loadImages(0, 8);
                 $(".galleryLoadingInd").fadeOut();
 
             } else {
@@ -148,14 +147,13 @@
     loadMoreButton.addEventListener('click', () => {
         console.log('loading more')
         console.log('end, ', end, " less equal ", "allDisplayImages, ", allDisplayImages.length, " = ", end <= allDisplayImages.length )
-        if (end <= allDisplayImages.length) {
-            loadImages(start, end, losslessImages);
-            start += 8; // Increment start by 12 for next batch
-            end += 8; // Increment end by 12 for next batch
-            console.log('start, ', start, ' end, ', end)
 
+        if (end <= allDisplayImages.length) {
+            loadImages(start, end);
+            start += 8; // Increment start by 8 for next batch
+            end += 8; // Increment end by 8 for next batch
+            console.log('start, ', start, ' end, ', end)
         } else {
-            console.log('Loading remains.')
             loadImages(start, allDisplayImages.length);
             loadMoreButton.disabled = true; // Disable button when there are no more images to load
         }
