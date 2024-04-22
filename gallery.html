@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" sizes="500x500" href="assets/img/local/pottoceramic.png">
+    <meta name="theme-color" content="rgb(125, 201, 252)">
+    <meta name="description" content="As weird as a name can get.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image"
+        content="https://raw.githubusercontent.com/Potato22/pottolink/master/assets/img/content/thumb.jpg">
+    <meta name="twitter:title" content="Potto">
+    <meta name="twitter:description" content="As weird as a name can get.">
+    <meta property="og:type" content="sketsite">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/Potato22/pottolink/master/assets/img/content/thumb.jpg">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potto</title>
+
+    <script src="assets/js/lib/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+
+    <link rel="stylesheet" href="assets/css/global/root.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <!-- <script src="assets/js/navviewport.js" defer></script> -->
+    <script src="assets/js/themetoggle.js" defer></script>
+    <!-- <script src="assets/js/backButton.js" defer></script> -->
+
+    <script src="/assets/orb/poc.mjs" type="module"></script>
+
+    <!-- <script>
+        //var windowH = $(window).width();
+        //console.log(windowH > 740)
+        //if (windowH >= 740) {
+        //}
+        $(document).scroll(function () {
+            var scrollDistance = $(this).scrollTop();
+            //console.log(scrollDistance)
+            if (scrollDistance >= 0) {
+                $('.heroimage, .forwardwrap').fadeOut();
+                $('.themetogglecont').css({
+                    'opacity': '1'
+                });
+            } else {
+                $('.heroimage, .forwardwrap').fadeIn();
+                $('.themetogglecont').css({
+                    'opacity': '0'
+                });
+            }
+        });
+    </script> -->
+</head>
+
+<body>
+    <!-- loader -->
+    <div class="loadblock">
+        <div class="outer"></div>
+        <div class="inner"></div>
+    </div>
+    <!-- orb cursor -->
+    <orb-cursor speed=".2"></orb-cursor>
+    <!-- theme toggle -->
+    <div class="themetogglecont">
+        <div class="togglecont" orbReact="true">
+            <div class="splash"></div>
+            <label class="checkboxtrig">
+                <input type="checkbox" id="ttogle" />
+                <div class="material-icons-outlined icon">light_mode</div>
+        </div>
+    </div>
+
+    <!-- START -->
+    <!--IMGZOOMIN-->
+    <div class="zoomindimmer"></div>
+    <div class="zoomin">
+        <div class="zoomincontentAlign">
+            <div class="zoomDisplay">
+                <img loading="lazy" class="zoomincontent" src="">
+                <video preload="none" autoplay loop class="zoomincontent" src="">
+            </div>
+            <div class="zoomalttext"></div>
+        </div>
+    </div>
+
+    <nav class="dynamicnav navOff">
+        <div id="nlogo">
+            <svg viewBox="0 0 132.29 132.29">
+                <g transform="translate(108.91 -397.83)">
+                    <path class="npotto"
+                        d="m-81.612 397.83c-15.122 0-27.297 12.174-27.297 27.297v77.699c0 15.122 12.174 27.297 27.297 27.297h30.661c4.5367 0 8.1886-3.6525 8.1886-8.1892v-23.31c0-4.5367 3.6525-8.1886 8.1892-8.1886h30.66c15.122 0 27.297-12.174 27.297-27.297v-38.011c0-15.122-12.174-27.297-27.297-27.297zm0 10.054h77.699c9.5576 0 17.242 7.6848 17.242 17.242v35.441c0 10.976-8.8364 19.813-19.813 19.813h-28.09c-10.101 0-18.243 8.1411-18.243 18.243v13.256c0 4.5367-3.652 8.1892-8.1886 8.1892h-20.606c-9.5576 0-17.242-7.6848-17.242-17.242v-77.699c0-9.5576 7.6848-17.242 17.242-17.242z"
+                        stroke-width=".22038" />
+                </g>
+            </svg>
+        </div>
+        <div class="buttongroup">
+            <a href="./">
+                <div class="nbutton about">Home
+                    <span class="strikethrough s1"></span>
+                </div>
+            </a>
+            <a href="#c">
+                <div class="nbutton creation">[:::]
+                    <span class="strikethrough s2"></span>
+                </div>
+            </a>
+            <!-- <a href="#contact">
+                <div class="nbutton contact">Contact
+                    <span class="strikethrough s3"></span>
+                </div>
+            </a> -->
+        </div>
+    </nav>
+    <div id="about" class="anchor"></div>
+    <div class="mainboxfloater">
+        <div class="mainbox">
+            <!-- CARDGRID -->
+            <div id="create" class="anchor"></div>
+            <div class="galleryLoadingInd tcreg"></div>
+
+            <div class="cardgrid" id="latestWorks"></div>
+            <!-- <div class="cardgrid" id="daImg" data-da-gallery="Potato2292/85705326"></div> -->
+            <button id="loadMore">Load More</button>
+
+            <div class="wideGo" orbreact="true">
+                <a id="loadMore" class="wideGoTitle">Load more
+                    <svg class="dynamicarrow" viewBox="0 0 10 10">
+                        <g>
+                            <path class="line" d="M0 5h7"></path>
+                            <path class="arrow" d="M1 1l4 4-4 4"></path>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <!-- <script src="assets/js/lib/dagallery.js"></script> -->
+        <script src="assets/js/lib/b2DispGallery_gallery.js"></script>
+        <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
+        <!-- <script src="assets/js/lib/aosconfig.js" defer></script> -->
+        <!-- <script src="assets/js/lib/smooth-scroll.js"></script> -->
+        <script src="assets/js/zoomtrigger.js"></script>
+
+        <!-- <script>
+            $('.openExtraButton').click(function () {
+                $(this).addClass('opensExtraforU')
+                $('.extraWrap').show()
+            });
+        </script> -->
+        <!-- <script>
+            var scroll = new SmoothScroll('a[href*="#"]', {
+                speed: 800,
+            });
+        </script> -->
+        <script>
+            $(document).ready(function () {
+                $('.themetogglecont').css({
+                    'opacity': '1'
+                });
+                $(".loadblock").fadeOut('fast');
+            })
+        </script>
+        <!-- <script defer>
+            AOS.init();
+        </script> -->
+    </div>
+    </div>
+</body>
+
+</html>

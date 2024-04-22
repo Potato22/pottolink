@@ -2,9 +2,14 @@
     console.log('init');
 
     // Define filtering variables
-    var filterNSFW = true;
+    var filterNSFW = false;
     var filterVersion = false;
-    var filterSketch = true;
+    var filterSketch = false;
+
+    // Store all display images
+    let allDisplayImages = [];
+    let losslessImages = [];
+
 
     async function fetchDisplay() {
         console.log('async fetchDisplay');
@@ -25,14 +30,49 @@
         }
     }
 
+    function loadImages(start, end, losslessImages) {
+        const displayCount = allDisplayImages.slice(start, end);
+        const latestWorkGrid = document.getElementById('latestWorks');
+        const imgDataFragment = document.createDocumentFragment();
+
+        displayCount.forEach(item => {
+            const img = new Image();
+            const losslessLinko = document.createElement('p');
+            img.setAttribute('data-aos', 'zoom-in');
+            img.setAttribute('class', 'imgs cards imgcard b2Imgs');
+            img.setAttribute('orbReact', 'true');
+            //img.setAttribute('loading', 'lazy');
+            img.src = item.urlLossy;
+            img.alt = item.nameLossy; // remove file ext
+            img.dataset.nsfw = item.nsfw ? 'true' : 'false';
+            img.dataset.sketch = item.sketch ? 'true' : 'false';
+            img.dataset.versioning = item.versioning ? 'true' : 'false';
+
+            const matchingLossless = losslessImages.find(x => x.nameLossless === item.nameLossy);
+            if (matchingLossless) {
+                losslessLinko.textContent = 'lossless: ' + matchingLossless.urlLossless;
+                img.dataset.lossless = matchingLossless.urlLossless;
+            } else if (item.sketch) {
+                losslessLinko.textContent = 'Sketch: ' + item.urlLossy;
+            } else {
+                losslessLinko.textContent = 'No lossless version available';
+                img.dataset.lossless = false;
+            }
+
+            imgDataFragment.append(img);
+        });
+        console.log("Display Data:", displayCount);
+        console.log("Lossless Data:", losslessImages);
+
+        latestWorkGrid.appendChild(imgDataFragment);
+    }
+
     fetchDisplay()
         .then(data => {
             if (data) {
                 console.log('Fetched files:', data);
                 console.log("filtering");
                 // Data processing
-                const displayImages = [];
-                const losslessImages = [];
 
                 data.forEach(item => {
                     if (item.contentType.includes('image/')) {
@@ -46,7 +86,7 @@
 
                             // Apply filters
                             if ((!filterNSFW || !isNSFW) && (!filterVersion || !hasVersioning) && (!filterSketch || !isSketch)) {
-                                displayImages.push({
+                                allDisplayImages.push({
                                     [nameVariable]: item.name.replace(/(?:display|lossless)\//, '').replace('nsfw/', '').replace('sketch/', '').split('.')[0],
                                     [urlDisplay]: item.url,
                                     [dateUploaded]: item.uploadTime,
@@ -66,43 +106,9 @@
                     }
                 });
 
-                displayImages.sort((a, b) => new Date(b.date) - new Date(a.date));
-                const displayCount = displayImages.slice(0, 8);
+                allDisplayImages.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-                console.log("Display Data:", displayCount);
-                console.log("Lossless Data:", losslessImages);
-
-                const latestWorkGrid = document.getElementById('latestWorks');
-                const imgDataFragment = document.createDocumentFragment();
-
-                displayCount.forEach(item => {
-                    const img = new Image();
-                    const losslessLinko = document.createElement('p');
-                    img.setAttribute('data-aos', 'zoom-in');
-                    img.setAttribute('class', 'imgs cards imgcard b2Imgs');
-                    img.setAttribute('orbReact', 'true');
-                    //img.setAttribute('loading', 'lazy');
-                    img.src = item.urlLossy;
-                    img.alt = item.nameLossy; // remove file ext
-                    img.dataset.nsfw = item.nsfw ? 'true' : 'false';
-                    img.dataset.sketch = item.sketch ? 'true' : 'false';
-                    img.dataset.versioning = item.versioning ? 'true' : 'false';
-
-                    const matchingLossless = losslessImages.find(x => x.nameLossless === item.nameLossy);
-                    if (matchingLossless) {
-                        losslessLinko.textContent = 'lossless: ' + matchingLossless.urlLossless;
-                        img.dataset.lossless = matchingLossless.urlLossless;
-                    } else if (item.sketch) {
-                        losslessLinko.textContent = 'Sketch: ' + item.urlLossy;
-                    } else {
-                        losslessLinko.textContent = 'No lossless version available';
-                        img.dataset.lossless = false;
-                    }
-
-                    imgDataFragment.append(img);
-                });
-
-                latestWorkGrid.replaceChildren(imgDataFragment);
+                loadImages(0, 8, losslessImages);
                 $(".galleryLoadingInd").fadeOut();
 
             } else {
@@ -133,4 +139,26 @@
         if (flags.includes("0" || "default")) return false;
         return true;
     }
+
+    // Loader
+    const loadMoreButton = document.getElementById('loadMore');
+    let start = 8; // init start index for next batch
+    let end = 16; // init end index for next batch
+
+    loadMoreButton.addEventListener('click', () => {
+        console.log('loading more')
+        console.log('end, ', end, " less equal ", "allDisplayImages, ", allDisplayImages.length, " = ", end <= allDisplayImages.length )
+        if (end <= allDisplayImages.length) {
+            loadImages(start, end, losslessImages);
+            start += 8; // Increment start by 12 for next batch
+            end += 8; // Increment end by 12 for next batch
+            console.log('start, ', start, ' end, ', end)
+
+        } else {
+            console.log('Loading remains.')
+            loadImages(start, allDisplayImages.length);
+            loadMoreButton.disabled = true; // Disable button when there are no more images to load
+        }
+    });
+
 })();

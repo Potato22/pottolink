@@ -156,7 +156,7 @@ a:link, a:visited {
   transform: translateY(-40px);
 }
 
-.nlogo {
+#nlogo {
   position: relative;
   width: 40px;
   height: 40px;
@@ -393,7 +393,6 @@ a:link, a:visited {
   object-position: center;
   width: 100%;
   height: 100%;
-  pointer-events: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
