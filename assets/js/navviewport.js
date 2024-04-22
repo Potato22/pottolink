@@ -34,7 +34,7 @@ function chapter() {
     var gall = $('#gall').offset().top - $(window).scrollTop();
     var comm = $('#comm').offset().top - $(window).scrollTop();
     var trivia = $('#trivia').offset().top - $(window).scrollTop();
-    var extra = $('#threed').offset().top - $(window).scrollTop();
+    var extra = $('#extra').offset().top - $(window).scrollTop();
     
     
 
@@ -90,40 +90,23 @@ function chapter() {
     console.log('creatbool', createbool, '\n gallbool', gallbool, '\n commbool', commbool, '\n triviabool', triviabool, '\n extrabool', extrabool )
     //console.log('createbool %s, gallbool %s, triviabool %s', createbool, gallbool, triviabool, extrabool)
 
-    if (aboutbool == true) {
-        $('.s1').addClass('activestrike')
-    } else {
-        $('.s1').removeClass('activestrike')
-    }
-
-    if (createbool == true) {
-        $('.s2').addClass('activestrike')
-    } else {
-        $('.s2').removeClass('activestrike')
-    }
-    if (gallbool == true) {
-        $('.s2-1').addClass('blockactive')
-    } else {
-        $('.s2-1').removeClass('blockactive')
-    }
-
-    if (commbool == true) {
-        $('.s2-2').addClass('blockactive')
-    } else {
-        $('.s2-2').removeClass('blockactive')
-    }
-
-    if (triviabool == true) {
-        $('.s2-3').addClass('blockactive')
-    } else {
-        $('.s2-3').removeClass('blockactive')
-    }
-
-    if (extrabool == true) {
-        $('.s2-4').addClass('blockactive')
-    } else {
-        $('.s2-4').removeClass('blockactive')
-    }
+    const sections = [
+        { bool: aboutbool, selector: '.s1' },
+        { bool: createbool, selector: '.s2' },
+        { bool: gallbool, selector: '.s2-1' },
+        { bool: commbool, selector: '.s2-2' },
+        { bool: triviabool, selector: '.s2-3' },
+        { bool: extrabool, selector: '.s2-4' }
+    ];
+    
+    sections.forEach(section => {
+        if (section.bool) {
+            $(section.selector).addClass('activestrike');
+        } else {
+            $(section.selector).removeClass('activestrike');
+        }
+    });
+    
 }
 chapter();
 $(window).scroll(chapter);

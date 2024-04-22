@@ -444,6 +444,7 @@ a:link, a:visited {
   place-items: center;
   transform-origin: bottom left;
   transition: all 0.2s cubic-bezier(0.57, 0.07, 0.41, 1.95);
+  cursor: pointer;
 }
 .togglecont:hover {
   transform: scale(1.1);
@@ -487,6 +488,32 @@ a:link, a:visited {
     border-width: 1;
   }
 }
+.floatwindows {
+  text-align: center;
+  display: flex;
+  margin-left: 1em;
+  padding: 0.1rem 0.8rem;
+  font-family: var(--contentsecondary);
+  font-size: 0.7em;
+  pointer-events: auto;
+  color: var(--textD);
+  --borderwidth: 2.6px;
+  border-top: solid var(--borderwidth) var(--textD);
+  border-left: solid var(--borderwidth) var(--textD);
+  border-right: solid var(--borderwidth) var(--textD);
+  border-radius: 10px 10px 0 0;
+  color: var(--textD);
+  transition: all 0.2s cubic-bezier(0.57, 0.07, 0.41, 1.95);
+  -webkit-backdrop-filter: blur(10px) var(--brightnessD);
+          backdrop-filter: blur(10px) var(--brightnessD);
+}
+.floatwindows:hover {
+  padding: 0.4rem 0.8rem;
+}
+.floatwindows:active {
+  color: var(--textfL);
+}
+
 .icon {
   position: relative;
   color: var(--textD);
