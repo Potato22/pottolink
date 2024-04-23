@@ -31,6 +31,10 @@
   animation: zoom 0.5s forwards var(--sleek);
 }
 
+.imgpropgroup {
+  display: flex;
+}
+
 .zoomalttext {
   max-width: 60vw;
   text-align: center;
@@ -41,6 +45,19 @@
   padding: 0.2rem 1rem;
   border-radius: 10px;
   font-weight: 800;
+  font-family: var(--contentsecondary);
+}
+
+.zoomlosslesslink {
+  max-width: 60vw;
+  text-align: center;
+  border: solid 1px var(--blackfL);
+  color: var(--textD) !important;
+  margin: 0.3em 1rem 0.5em 1rem;
+  animation: zoom 0.5s forwards var(--sleek);
+  padding: 0.2rem 1rem;
+  border-radius: 10px;
+  font-weight: 200;
   font-family: var(--contentsecondary);
 }
 

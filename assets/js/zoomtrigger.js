@@ -15,6 +15,8 @@ $(document).on("click", "img.b2Imgs, img.imgz, video.imgz", function() {
         $("video.zoomincontent").addClass('zoomDisable')
         $("img.zoomincontent").attr("src", $(this).attr("src"))
         $(".zoomalttext").html($(this).attr("alt"))
+        //$(".zoomlosslesslink").html($(this).attr("data-lossless"))
+        $(".zoomlosslesslink").attr("href", $(this).attr("data-lossless"))
         zooming();
     } else if (zoomRequestType.is('video.imgz')) {
         $("img.zoomincontent").addClass('zoomDisable')
