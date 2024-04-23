@@ -18,15 +18,16 @@ const dataNSFW = localStorage.getItem("filterNSFW");
 const dataSketch = localStorage.getItem("filterSketch");
 const dataVersion = localStorage.getItem("filterVersion");
 
-function checkGlobal() {
-    console.log('-----------------------------------')
-    console.log('dataNSFW display:', dataNSFW)
-    console.log('dataSketch display:', dataSketch)
-    console.log('dataVersion display:', dataVersion)
-    console.log('-----------------------------------')
-}
+//function checkGlobal() {
+//    console.log('-----------------------------------')
+//    console.log('dataNSFW display:', dataNSFW)
+//    console.log('dataSketch display:', dataSketch)
+//    console.log('dataVersion display:', dataVersion)
+//    console.log('-----------------------------------')
+//}
 
 function switchUpdate(switchChange) {
+    $("#reloadButton").addClass("reloadReady")
     var whichSwitch = this.id
     if (switchChange.target.checked) {
         switch (whichSwitch) {
@@ -85,7 +86,7 @@ function setDefaultFallback() {
 if (dataNSFW === null || dataSketch === null || dataVersion === null) {
     setDefaultFallback();
 } else {
-    checkGlobal();
+    //checkGlobal();
     if ([dataNSFW, dataSketch, dataVersion].every(variable => variable === "hidden")) {
         setDefaultFallback();
     } else {
@@ -118,8 +119,13 @@ $(".filterDropdown").click(function() {
     $(".filterDrop").toggleClass('dropped')
 })
 
+$("#reloadButton").click(function(){
+    location.reload();
+})
+
 document.querySelectorAll('.FTbutton input[type="checkbox"]').forEach(function (switches) {
     switches.addEventListener("change", switchUpdate, false)
+
 })
 //if (currentNstate) {
 //    if (currentNstate === "displayed") {

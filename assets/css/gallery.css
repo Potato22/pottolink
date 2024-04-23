@@ -97,9 +97,7 @@
 .filterDrop {
   position: absolute;
   background: var(--alpha2baseD);
-  color: var(--textaccentD);
   font-weight: 500;
-  font-family: var(--content);
   margin-top: 3em;
   width: 130%;
   display: flex;
@@ -175,11 +173,43 @@
   font-size: 70px;
   display: grid;
   place-items: center;
-  transition: color 0.2s var(--sleek), transform 0.2s cubic-bezier(0.57, 0.07, 0.41, 1.95);
+  transition: color 0.2s var(--sleek), transform 0.2s var(--bounce);
 }
 
 .FTname {
   font-family: var(--display);
   font-weight: 100;
   margin: 0.5rem 0;
+}
+
+#reloadButton {
+  cursor: pointer;
+  pointer-events: none;
+  padding: 0.5em;
+  border: solid 1px var(--blackfL);
+  font-family: var(--content);
+  color: var(--textD);
+  border-radius: 10px;
+  width: 70%;
+  text-align: center;
+  opacity: 0.5;
+  border: 3px solid var(--textD);
+  box-shadow: var(--accentD) 0 0px 0;
+  transition: transform 0.2s var(--bounce), box-shadow 0.2s var(--bounce);
+}
+#reloadButton.reloadReady {
+  box-shadow: var(--textD) 0 5px 0;
+  transform: translateY(-5px);
+  pointer-events: auto;
+  opacity: 1;
+  background: var(--alphabaseD);
+}
+#reloadButton:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--textD) 0 10px 0;
+}
+#reloadButton:active {
+  transform: translateY(0px);
+  box-shadow: var(--accentD) 0 0 0;
+  transition: all 0.1s var(--accel);
 }/*# sourceMappingURL=gallery.css.map */

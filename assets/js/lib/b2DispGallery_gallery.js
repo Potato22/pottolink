@@ -1,10 +1,36 @@
 (() => {
+    const dataNSFW = localStorage.getItem("filterNSFW");
+    const dataSketch = localStorage.getItem("filterSketch");
+    const dataVersion = localStorage.getItem("filterVersion");
+    //console.log('dispGallery------------------------')
+    //console.log('dataNSFW display:', dataNSFW)
+    //console.log('dataSketch display:', dataSketch)
+    //console.log('dataVersion display:', dataVersion)
+    //console.log('-----------------------------------')
+    console.log('dataNSFW display:', dataNSFW, '\ndataSketch display:', dataSketch, '\ndataVersion display:', dataVersion)
     console.log('init');
 
+
+    const loadMoreButton = document.getElementById('loadMore');
+    if (dataNSFW === "displayed") {
+        var excludeNSFW = false;
+    } else {
+        var excludeNSFW = true;
+    }
+    if (dataSketch === "displayed") {
+        var excludeSketch = false;
+    } else {
+        var excludeSketch = true;
+    }
+    if (dataVersion === "displayed") {
+        var excludeVersioning = false;
+    } else {
+        var excludeVersioning = true;
+    }
     // Define filtering variables
-    var excludeNSFW = true;
-    var excludeSketch = false;
-    var excludeVersioning = false;
+    console.log('nsfw hidden', excludeNSFW, '\nsketch hidden', excludeSketch, '\nversioning hidden', excludeVersioning)
+
+
 
     // Store all display images
     let allDisplayImages = [];
@@ -141,7 +167,6 @@
     }
     
     // Loader
-    const loadMoreButton = document.getElementById('loadMore');
     let start = 8; // init start index for next batch
     let end = 16; // init end index for next batch
     
