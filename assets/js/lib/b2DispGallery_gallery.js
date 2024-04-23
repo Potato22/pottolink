@@ -2,7 +2,7 @@
     console.log('init');
 
     // Define filtering variables
-    var excludeNSFW = false;
+    var excludeNSFW = true;
     var excludeSketch = false;
     var excludeVersioning = false;
 
