@@ -796,6 +796,7 @@ a:link, a:visited {
 }
 
 .imgs {
+  position: absolute;
   -o-object-fit: cover;
   object-fit: cover;
   -o-object-position: center;
@@ -806,6 +807,9 @@ a:link, a:visited {
   -moz-user-select: none;
   user-select: none;
   transition: all 0.2s var(--sleek);
+}
+.imgs.self {
+  position: relative;
 }
 .imgs.leftoffset {
   -o-object-position: left;

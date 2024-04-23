@@ -79,7 +79,7 @@
                     const img = new Image();
                     const losslessLinko = document.createElement('p');
                     img.setAttribute('data-aos', 'zoom-in');
-                    img.setAttribute('class', 'imgs cards imgcard b2Imgs');
+                    img.setAttribute('class', 'imgs self cards imgcard b2Imgs');
                     img.setAttribute('orbReact', 'true');
                     //img.setAttribute('loading', 'lazy');
                     img.src = item.urlLossy;
