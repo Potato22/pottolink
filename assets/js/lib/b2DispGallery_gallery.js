@@ -15,7 +15,7 @@
         try {
             $(".galleryLoadingInd").html('Hold on...').addClass('holdon');
             console.log('attempting to call');
-            const response = await fetch('ahttps://pottob2-dispgallery.pottoart.workers.dev/api/v1/list_all_files');
+            const response = await fetch('https://pottob2-dispgallery.pottoart.workers.dev/api/v1/list_all_files');
             if (!response.ok) {
                 $(".galleryLoadingInd").html("Bucket responded with " + response.status).removeClass('holdon');
                 throw new Error('Something went wrong while trying to fetch files', response.status);

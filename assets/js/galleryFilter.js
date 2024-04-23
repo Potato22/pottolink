@@ -83,11 +83,10 @@ function setDefaultFallback() {
 }
 
 if (dataNSFW === null || dataSketch === null || dataVersion === null) {
-    alert('ohn o')
+    setDefaultFallback();
 } else {
     checkGlobal();
     if ([dataNSFW, dataSketch, dataVersion].every(variable => variable === "hidden")) {
-        alert('oh.');
         setDefaultFallback();
     } else {
         if (dataNSFW === "displayed") {
