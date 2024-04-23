@@ -38,7 +38,7 @@
             const img = new Image();
             const losslessLinko = document.createElement('p');
             img.setAttribute('data-aos', 'zoom-in');
-            img.setAttribute('class', 'imgs cards imgcard b2Imgs');
+            img.setAttribute('class', 'imgs cards b2Imgs');
             img.setAttribute('orbReact', 'true');
             //img.setAttribute('loading', 'lazy');
             img.src = item.urlLossy;
@@ -138,11 +138,16 @@
         if (flags.includes("0" || "default")) return false;
         return true;
     }
-
+    
     // Loader
     const loadMoreButton = document.getElementById('loadMore');
     let start = 8; // init start index for next batch
     let end = 16; // init end index for next batch
+    
+    function disableLoader () {
+        //loadMoreButton.disabled = true;
+        $(loadMoreButton).hide()
+    }
 
     loadMoreButton.addEventListener('click', () => {
         console.log('loading more')
@@ -155,7 +160,7 @@
             console.log('start, ', start, ' end, ', end)
         } else {
             loadImages(start, allDisplayImages.length);
-            loadMoreButton.disabled = true; // Disable button when there are no more images to load
+            disableLoader()
         }
     });
 

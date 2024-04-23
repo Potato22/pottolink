@@ -97,20 +97,9 @@
         </div>
         <div class="buttongroup">
             <a href="./">
-                <div class="nbutton about">Home
-                    <span class="strikethrough s1"></span>
-                </div>
+                <div class="nbutton about">Home</div>
             </a>
-            <a href="#c">
-                <div class="nbutton creation">[:::]
-                    <span class="strikethrough s2"></span>
-                </div>
-            </a>
-            <!-- <a href="#contact">
-                <div class="nbutton contact">Contact
-                    <span class="strikethrough s3"></span>
-                </div>
-            </a> -->
+            <div class="nbutton filterDropdown">[Content Filter]</div>
         </div>
     </nav>
     <div id="about" class="anchor"></div>
@@ -122,10 +111,11 @@
 
             <div class="cardgrid" id="latestWorks"></div>
             <!-- <div class="cardgrid" id="daImg" data-da-gallery="Potato2292/85705326"></div> -->
-            <button id="loadMore">Load More</button>
+            
+            <!-- <button id="loadMore">Load More</button> -->
 
-            <div class="wideGo" orbreact="true">
-                <a id="loadMore" class="wideGoTitle">Load more
+            <div id="loadMore" class="wideGo" orbreact="true">
+                <a class="wideGoTitle">Load more
                     <svg class="dynamicarrow" viewBox="0 0 10 10">
                         <g>
                             <path class="line" d="M0 5h7"></path>
@@ -134,6 +124,7 @@
                     </svg>
                 </a>
             </div>
+            
         </div>
         <!-- <script src="assets/js/lib/dagallery.js"></script> -->
         <script src="assets/js/lib/b2DispGallery_gallery.js"></script>
@@ -142,17 +133,6 @@
         <!-- <script src="assets/js/lib/smooth-scroll.js"></script> -->
         <script src="assets/js/zoomtrigger.js"></script>
 
-        <!-- <script>
-            $('.openExtraButton').click(function () {
-                $(this).addClass('opensExtraforU')
-                $('.extraWrap').show()
-            });
-        </script> -->
-        <!-- <script>
-            var scroll = new SmoothScroll('a[href*="#"]', {
-                speed: 800,
-            });
-        </script> -->
         <script>
             $(document).ready(function () {
                 $('.themetogglecont').css({
