@@ -54,6 +54,7 @@ body {
   font-family: Inter;
   src: url(../../font/Inter.var.woff2) format("truetype-variations");
   font-weight: 1 1000;
+  letter-spacing: -62px;
 }
 
 @font-face {
@@ -73,6 +74,8 @@ body {
   --baseL: rgba(252, 242, 233, 1);
   --alphabaseD: rgba(24, 24, 24, 0.7);
   --alphabaseL: rgba(252, 242, 233, 0.7);
+  --alpha2baseD: rgba(24, 24, 24, 0.3);
+  --alpha2baseL: rgba(252, 242, 233, 0.3);
   --basesecondaryD: rgb(44, 44, 44);
   --basesecondaryL: rgb(199, 194, 189);
   --textD: rgb(255, 255, 255);
@@ -107,11 +110,15 @@ body {
   --sleek: cubic-bezier(0.03, 0.77, 0.34, 1);
   --accel: cubic-bezier(0.72, 0.06, 0.96, 0.57);
   --anchorhead: cubic-bezier(0.24, 0.01, 0.01, 1);
+
+  --brightnessD: brightness(1.2);
+  --brightnessL: brightness(.8);
 }
 
 [data-theme=light] {
   --baseD: var(--baseL);
   --alphabaseD: var(--alphabaseL);
+  --alpha2baseD: var(--alpha2baseL);
   --basesecondaryD: var(--basesecondaryL);
   --textD: var(--textL);
   --textsecondaryD: var(--textsecondaryL);
@@ -125,6 +132,8 @@ body {
   --basefL: var(--basetD);
   --boxshadowD: var(--boxshadowL);
   --loaderD: var(--loaderL);
+
+  --brightnessD: var(--brightnessL)
 }
 
 a {
@@ -188,6 +197,7 @@ a {
 .buttongroup {
   position: relative;
   display: flex;
+  justify-content: flex-end;
 }
 
 .nbutton {
@@ -604,6 +614,7 @@ a {
   font-family: var(--content);
   font-size: 2em;
   color: var(--textD);
+  letter-spacing: -.62pt;
 }
 
 .titletextcard {
@@ -649,6 +660,7 @@ a {
   line-height: 1.7;
   font-size: 1.15em;
   font-weight: 500;
+  letter-spacing: -.62pt;
 }
 
 .tcsmall {
@@ -656,6 +668,7 @@ a {
   line-height: 1.7;
   font-size: 1em;
   font-weight: 400;
+  letter-spacing: -.62pt;
 }
 
 .tcsubquote {
@@ -718,6 +731,7 @@ a {
   padding-bottom: 1rem;
   font-family: var(--content);
   color: var(--textD);
+  letter-spacing: -.62pt;
 }
 
 .bypass {
@@ -750,6 +764,7 @@ a {
   font-family: var(--content);
   color: var(--textD);
   background: var(--basesecondaryD);
+  letter-spacing: -.62pt;
 }
 
 /*thumbnailcard---------------------------*/
@@ -767,6 +782,7 @@ a {
   display: flex;
   align-items: center;
   transition: all 0.15s;
+  letter-spacing: -.62pt;
 }
 
 .wideGo {
@@ -855,6 +871,8 @@ a {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  transition: all .2s var(--sleek);
+
 
   &.leftoffset {
     -o-object-position: left;
@@ -900,8 +918,8 @@ a {
   --borderwidth: 2.6px;
   border-top: solid var(--borderwidth) var(--textD);
   border-right: solid var(--borderwidth) var(--textD);
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 0 20px 0 0;
   display: grid;
   place-items: center;
@@ -1001,7 +1019,7 @@ a {
   }
 }
 
-.icon {
+.icon, .tticon {
   position: relative;
   color: var(--textD);
 }

@@ -181,7 +181,8 @@
 }
 
 /*IMAGEZOOM-------------------------------*/
-.b2Imgs, .imgz {
+.b2Imgs,
+.imgz {
   cursor: pointer;
 }
 
@@ -215,7 +216,6 @@
 .zoomalttext {
   max-width: 60vw;
   text-align: center;
-  font-family: var(--content);
   background: var(--blackfL);
   color: var(--textfL);
   margin: 0.3em 1rem 0.5em 1rem;

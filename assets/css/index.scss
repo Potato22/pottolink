@@ -163,6 +163,7 @@
 }
 
 @media screen and (max-width: 740px) {
+
   //remove Hero
   #hello,
   #fader,
@@ -202,7 +203,8 @@
 }
 
 /*IMAGEZOOM-------------------------------*/
-.b2Imgs, .imgz {
+.b2Imgs,
+.imgz {
   cursor: pointer;
 }
 
@@ -236,8 +238,7 @@
 
 .zoomalttext {
   max-width: 60vw;
-  text-align: center;
-  font-family: var(--content);
+  text-align: center;  
   background: var(--blackfL);
   color: var(--textfL);
   margin: .3em 1rem .5em 1rem;
@@ -247,6 +248,7 @@
   font-weight: 800;
   font-family: var(--contentsecondary);
 }
+
 .zoomaltlink {
   color: var(--accentD) !important;
 }
@@ -270,7 +272,7 @@
     opacity: 0;
     transform: scale(0.95);
   }
-  
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -282,12 +284,13 @@
     opacity: 0;
     transform: scale(0.95);
   }
-  
+
   to {
     opacity: 1;
     transform: scale(1);
   }
 }
+
 /*IMAGEZOOM-------------------------------*/
 
 .extraWrap {
@@ -300,17 +303,20 @@
 .opensExtraforU {
   animation: opensExtraForU 0.5s var(--anchorhead) forwards;
 }
+
 @keyframes opensExtraForU {
   0% {
     transform: translateY(0px);
     opacity: 1;
   }
+
   100% {
     transform: translateY(50px);
     opacity: 0;
     display: none;
   }
 }
+
 
 /*# sourceMappingURL=index-gallery.css.map */
 

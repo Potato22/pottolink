@@ -1,5 +1,6 @@
 /*IMAGEZOOM-------------------------------*/
-.b2Imgs, .imgz {
+.b2Imgs,
+.imgz {
   cursor: pointer;
 }
 
@@ -33,7 +34,6 @@
 .zoomalttext {
   max-width: 60vw;
   text-align: center;
-  font-family: var(--content);
   background: var(--blackfL);
   color: var(--textfL);
   margin: 0.3em 1rem 0.5em 1rem;
@@ -71,4 +71,115 @@
     transform: scale(1);
   }
 }
-/*IMAGEZOOM-------------------------------*//*# sourceMappingURL=gallery.css.map */
+/*IMAGEZOOM-------------------------------*/
+.filterDropdown {
+  background: var(--blackfL);
+  color: var(--textfL);
+  font-family: var(--contentsecondary);
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 0.3rem 3rem;
+  cursor: pointer;
+}
+.filterDropdown:hover {
+  background: var(--accentD);
+  color: var(--textD);
+  font-weight: 900;
+}
+.filterDropdown.holdDrop {
+  background: none;
+  border: solid 1px var(--accentD);
+  box-sizing: border-box;
+  color: var(--textaccentD);
+  font-weight: 900;
+}
+
+.filterDrop {
+  position: absolute;
+  background: var(--alpha2baseD);
+  color: var(--textaccentD);
+  font-weight: 500;
+  font-family: var(--content);
+  margin-top: 3em;
+  width: 130%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 20px;
+  transition: background 0.2s var(--sleek), color 0.2s var(--sleek), transform 0.2s var(--anchorhead), opacity 0.2s var(--sleek);
+  transform: translateY(-120px);
+  opacity: 0;
+  pointer-events: none;
+}
+.filterDrop.dropped {
+  transform: translateY(0px);
+  opacity: 1;
+  pointer-events: auto;
+  transition: transform 0.2s var(--sleek), opacity 0.2s var(--sleek);
+}
+
+@media screen and (max-width: 420px) {
+  .filterDropdown {
+    padding: 0.3rem 1.5rem;
+  }
+  .filterDrop {
+    width: 110%;
+  }
+}
+.filterButtonGroup {
+  color: var(--textD);
+  margin-bottom: 1em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: background 0.2s var(--sleek), color 0.2s var(--sleek);
+}
+
+.FTbutton {
+  cursor: pointer;
+  margin: 0 2%;
+  background: var(--alphabaseD);
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.3rem;
+  border-radius: 10px;
+  transition: background 0.2s var(--sleek), filter 0.2s var(--sleek), transform 0.2s var(--anchorhead);
+}
+.FTbutton:hover {
+  filter: var(--brightnessD);
+}
+.FTbutton:active {
+  transform: scale(0.8);
+}
+.FTbutton.FTon {
+  background: var(--accentD);
+}
+.FTbutton.FTon .FTicon {
+  transform: scale(1.2);
+}
+
+.filterCheckbox {
+  display: none;
+}
+
+.FTicon {
+  font-variation-settings: "FILL" 1, "wght" 200, "GRAD" 0, "opsz" 24;
+  --iconSize: 90px;
+  height: var(--iconSize);
+  width: var(--iconSize);
+  font-size: 70px;
+  display: grid;
+  place-items: center;
+  transition: color 0.2s var(--sleek), transform 0.2s cubic-bezier(0.57, 0.07, 0.41, 1.95);
+}
+
+.FTname {
+  font-family: var(--display);
+  font-weight: 100;
+  margin: 0.5rem 0;
+}/*# sourceMappingURL=gallery.css.map */

@@ -1,5 +1,6 @@
 /*IMAGEZOOM-------------------------------*/
-.b2Imgs, .imgz {
+.b2Imgs,
+.imgz {
   cursor: pointer;
 }
 
@@ -34,7 +35,6 @@
 .zoomalttext {
   max-width: 60vw;
   text-align: center;
-  font-family: var(--content);
   background: var(--blackfL);
   color: var(--textfL);
   margin: .3em 1rem .5em 1rem;
@@ -44,6 +44,7 @@
   font-weight: 800;
   font-family: var(--contentsecondary);
 }
+
 .zoomaltlink {
   color: var(--accentD) !important;
 }
@@ -67,7 +68,7 @@
     opacity: 0;
     transform: scale(0.95);
   }
-  
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -79,10 +80,136 @@
     opacity: 0;
     transform: scale(0.95);
   }
-  
+
   to {
     opacity: 1;
     transform: scale(1);
   }
 }
+
 /*IMAGEZOOM-------------------------------*/
+
+.filterDropdown {
+  background: var(--blackfL);
+  color: var(--textfL);
+  font-family: var(--contentsecondary);
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 0.3rem 3rem;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--accentD);
+    color: var(--textD);
+    font-weight: 900;
+  }
+
+  &.holdDrop {
+    background: none;
+    border: solid 1px var(--accentD);
+    box-sizing: border-box;
+    color: var(--textaccentD);
+    font-weight: 900;
+  }
+}
+
+.filterDrop {
+  position: absolute;
+  background: var(--alpha2baseD);
+  color: var(--textaccentD);
+  font-weight: 500;
+  font-family: var(--content);
+  margin-top: 3em;
+  width: 130%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  transition: background .2s var(--sleek), color .2s var(--sleek), transform .2s var(--anchorhead), opacity .2s var(--sleek);
+  transform: translateY(-120px);
+  opacity: 0;
+  pointer-events: none;
+  //display: none;
+
+  &.dropped {
+    transform: translateY(0px);
+    opacity: 1;
+    pointer-events: auto;
+    transition: transform .2s var(--sleek), opacity .2s var(--sleek);
+    //display: flex;
+  }
+}
+@media screen and (max-width: 420px) {
+  .filterDropdown {
+    padding: 0.3rem 1.5rem;
+  }
+  .filterDrop {
+    width: 110%;
+  }
+}
+.filterButtonGroup {
+  color: var(--textD);
+  margin-bottom: 1em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: background .2s var(--sleek), color .2s var(--sleek);
+}
+
+.FTbutton {
+  cursor: pointer;
+  margin: 0 2%;
+  background: var(--alphabaseD);
+  width: 25%;
+  //border: solid 1px var(--textD);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: .3rem;
+  border-radius: 10px;
+  transition: background .2s var(--sleek), filter .2s var(--sleek), transform .2s var(--anchorhead);
+
+  &:hover {
+    filter: var(--brightnessD);
+  }
+
+  &:active {
+    transform: scale(.8);
+  }
+
+  &.FTon {
+    .FTicon {
+      transform: scale(1.2);
+    }
+
+    background: var(--accentD);
+  }
+}
+
+.filterCheckbox {
+  display: none;
+}
+
+.FTicon {
+  font-variation-settings:
+    'FILL'1,
+    'wght'200,
+    'GRAD'0,
+    'opsz'24;
+  //gicons
+  --iconSize: 90px;
+  height: var(--iconSize);
+  width: var(--iconSize);
+  font-size: 70px;
+  display: grid;
+  place-items: center;
+  transition: color .2s var(--sleek), transform .2s cubic-bezier(0.57, 0.07, 0.41, 1.95);
+}
+
+.FTname {
+  font-family: var(--display);
+  font-weight: 100;
+  margin: .5rem 0;
+}

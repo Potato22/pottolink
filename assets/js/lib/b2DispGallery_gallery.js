@@ -2,9 +2,9 @@
     console.log('init');
 
     // Define filtering variables
-    var filterNSFW = false;
-    var filterVersion = false;
-    var filterSketch = false;
+    var excludeNSFW = false;
+    var excludeSketch = false;
+    var excludeVersioning = false;
 
     // Store all display images
     let allDisplayImages = [];
@@ -15,7 +15,7 @@
         try {
             $(".galleryLoadingInd").html('Hold on...').addClass('holdon');
             console.log('attempting to call');
-            const response = await fetch('https://pottob2-dispgallery.pottoart.workers.dev/api/v1/list_all_files');
+            const response = await fetch('ahttps://pottob2-dispgallery.pottoart.workers.dev/api/v1/list_all_files');
             if (!response.ok) {
                 $(".galleryLoadingInd").html("Bucket responded with " + response.status).removeClass('holdon');
                 throw new Error('Something went wrong while trying to fetch files', response.status);
@@ -83,8 +83,8 @@
                             const isNSFW = item.url.includes('nsfw');
                             const hasVersioning = hasExtraFlags(item.name);
 
+                            if ((!excludeNSFW || !isNSFW) && (!excludeVersioning || !hasVersioning) && (!excludeSketch || !isSketch)) {
                             // Apply filters
-                            if ((!filterNSFW || !isNSFW) && (!filterVersion || !hasVersioning) && (!filterSketch || !isSketch)) {
                                 allDisplayImages.push({
                                     [nameVariable]: item.name.replace(/(?:display|lossless)\//, '').replace('nsfw/', '').replace('sketch/', '').split('.')[0],
                                     [urlDisplay]: item.url,
@@ -109,6 +109,7 @@
 
                 loadImages(0, 8);
                 $(".galleryLoadingInd").fadeOut();
+                $(loadMoreButton).fadeIn()
 
             } else {
                 // Handle the case when data is null
