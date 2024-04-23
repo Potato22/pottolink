@@ -141,7 +141,7 @@
     </div>
 
     <nav class="dynamicnav navOff">
-        <div id="nlogo">
+        <a id="nlogo">
             <svg viewBox="0 0 132.29 132.29">
                 <g transform="translate(108.91 -397.83)">
                     <path class="npotto"
@@ -149,7 +149,7 @@
                         stroke-width=".22038" />
                 </g>
             </svg>
-        </div>
+        </a>
         <div class="buttongroup">
             <a href="#about">
                 <div class="nbutton about">Hello.
@@ -392,7 +392,7 @@
                     <div class="titletextcard">Gallery.</div>
                     <div class="tcsubquote">::Latest few works</div>
                 </div>
-                <a target="_blank" href="./gallery" class="cards linkcard" data-aos-duration="500"
+                <a href="./gallery" class="cards linkcard" data-aos-duration="500"
                     data-aos-easing="sleek" data-aos="fade-right">
                     <div style="color: var(--textD);" class="textcard invis bigger col">
                         <b>View All</b>
@@ -405,10 +405,10 @@
                     </div>
                 </a>
                 <!-- <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards widecard textcard tcbigger">View all works in the Gallery page with optional lossless downloads.</div> -->
-                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out"
-                    class="cards widecard textcard tcreg">This gallery is currently on a migration process to my own
-                    gallery provider. For now DeviantArt API will still be used. <br> Clicking on any Gallery page links
-                    will return you to a 404 page since I have not added it in yet.</div>
+                <div class="cards textcard invis widecard">
+                    <div class="titletextcard">Gallery</div>
+                    View all recent artworks with in the Gallery Page. <del>Includes lossless viewing and downloads.</del> (WIP)
+                </div>
             </div>
             <div class="galleryLoadingInd tcreg"></div>
             <div class="cardgrid" id="latestWorks"></div>

@@ -145,7 +145,7 @@ a:link, a:visited {
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem 0 0;
-  z-index: 1;
+  z-index: 5;
   background: var(--alphabaseD);
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
