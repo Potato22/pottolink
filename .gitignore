@@ -1,4 +1,6 @@
 *.css.map
+*.sass.map
+*.scss.map
 dagallery.js
 deviantART-gallery-plugin.min.js
 node_modules
