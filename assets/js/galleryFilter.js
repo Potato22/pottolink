@@ -78,7 +78,7 @@ function setDefaultFallback() {
     sketchSwitch.checked = true;
     localStorage.setItem("filterSketch", "displayed");
     
-    $("#versioning-FT").addClass('FTon');
+    $("#versioning-FT").removeClass('FTon');
     versioningSwitch.checked = false;
     localStorage.setItem("filterVersion", "hidden");
 }
@@ -120,7 +120,13 @@ $(".filterDropdown").click(function() {
 })
 
 $("#reloadButton").click(function(){
+    console.log("reloading")
+    console.log("dataNSFW: ", dataNSFW, "dataSketch:", dataSketch, "dataVersion:", "dataVersion")
     location.reload();
+    //if (dataNSFW && dataSketch && dataVersion === "hidden") {
+    //    alert("what are you doing?")
+    //} else {
+    //}
 })
 
 document.querySelectorAll('.FTbutton input[type="checkbox"]').forEach(function (switches) {

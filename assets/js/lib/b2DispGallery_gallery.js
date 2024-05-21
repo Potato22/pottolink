@@ -2,6 +2,7 @@
     const dataNSFW = localStorage.getItem("filterNSFW");
     const dataSketch = localStorage.getItem("filterSketch");
     const dataVersion = localStorage.getItem("filterVersion");
+    const loadMoreButton = document.getElementById('loadMore');
     //console.log('dispGallery------------------------')
     //console.log('dataNSFW display:', dataNSFW)
     //console.log('dataSketch display:', dataSketch)
@@ -11,7 +12,6 @@
     console.log('init');
 
 
-    const loadMoreButton = document.getElementById('loadMore');
     if (dataNSFW === "displayed") {
         var excludeNSFW = false;
     } else {
@@ -41,7 +41,7 @@
         try {
             $(".galleryLoadingInd").html('Hold on...').addClass('holdon');
             console.log('attempting to call');
-            const response = await fetch('https://pottob2-dispgallery.pottoart.workers.dev/api/v1/list_all_files');
+            const response = await fetch('https://pottob2-dispgallery.pottoart.workers.dev/api/v1/list_all_files?maxFileCount=800');
             if (!response.ok) {
                 $(".galleryLoadingInd").html("Bucket responded with " + response.status).removeClass('holdon');
                 throw new Error('Something went wrong while trying to fetch files', response.status);
@@ -135,7 +135,7 @@
 
 
                 //DISP COUNT
-                loadImages(0, 8);
+                loadImages(0, 16);
                 $(".galleryLoadingInd").fadeOut();
                 $(loadMoreButton).fadeIn()
 
@@ -164,17 +164,21 @@
         const flags = getFlags(imgsFilename);
         if (flags.length === 0) return false;
         if (flags.length === 1 && flags.includes("sfw")) return false;
-        if (flags.includes("0" || "default")) return false;
+        if (flags.includes("0" || "default" || "origin")) return false;
         return true;
     }
     
     // Loader
-    let start = 8; // init start index for next batch
-    let end = 16; // init end index for next batch
+    let start = 16; // init start index for next batch
+    let end = 24; // init end index for next batch
     
     function disableLoader () {
         //loadMoreButton.disabled = true;
-        $(loadMoreButton).hide()
+        $(".wideGoTitle").html("Nothing else to load...")
+        $(loadMoreButton).css('pointer-events', 'none')
+        setTimeout(() => {
+            $(loadMoreButton).fadeOut()
+        }, 5000);
     }
 
     loadMoreButton.addEventListener('click', () => {
