@@ -133,6 +133,8 @@
 
                 allDisplayImages.sort((a, b) => new Date(b.date) - new Date(a.date));
 
+
+                //DISP COUNT
                 loadImages(0, 8);
                 $(".galleryLoadingInd").fadeOut();
                 $(loadMoreButton).fadeIn()
