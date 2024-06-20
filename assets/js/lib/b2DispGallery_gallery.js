@@ -147,7 +147,7 @@
             console.error('Error during fetch:', error);
         });
 
-    // Function to get flags from filename
+    // use '<filename> -<any>' as trigger for "flags"
     function getFlags(input) {
         let ret = [];
         let entries = input.split(".").join(" ").split(" ");
@@ -159,7 +159,13 @@
         return ret;
     }
 
-    // Function to check if filename has extra flags
+    // flag exception
+    // check chain
+    // noflag                           false
+    // flag*sfw                         false
+    // flag*(0 OR default OR origin)    false
+    // nocatch                          true
+    //
     function hasExtraFlags(imgsFilename) {
         const flags = getFlags(imgsFilename);
         if (flags.length === 0) return false;

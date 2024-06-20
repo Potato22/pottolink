@@ -78,9 +78,9 @@ function setDefaultFallback() {
     sketchSwitch.checked = true;
     localStorage.setItem("filterSketch", "displayed");
     
-    $("#versioning-FT").removeClass('FTon');
-    versioningSwitch.checked = false;
-    localStorage.setItem("filterVersion", "hidden");
+    $("#versioning-FT").addClass('FTon');
+    versioningSwitch.checked = true;
+    localStorage.setItem("filterVersion", "displayed");
 }
 
 if (dataNSFW === null || dataSketch === null || dataVersion === null) {

@@ -11,6 +11,8 @@ function zoomout() {
 $(document).on("click", "img.b2Imgs, img.imgz, video.imgz", function() {
     var zoomRequestType = $(this);
 
+    $("orb-cursor").fadeOut();
+    
     if (zoomRequestType.is('img.imgz') || zoomRequestType.is('img.b2Imgs')) {
         $("video.zoomincontent").addClass('zoomDisable')
         $("img.zoomincontent").attr("src", $(this).attr("src"))
@@ -31,6 +33,7 @@ $(document).on("click", "img.b2Imgs, img.imgz, video.imgz", function() {
 
 $(".zoomincontent,.zoomin").click(function() {
     zoomout();
+    $("orb-cursor").show();
 });
 
 

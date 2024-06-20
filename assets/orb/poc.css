@@ -1,6 +1,7 @@
 .orbcursor {
   --orbsize: 10px;
   --growScale: 10;
+  --interactScale: 50;
   --offset: -0.5px;
   --duration: 0.2s;
   /*you can add your own easing function here*/
@@ -81,5 +82,17 @@
 
   to {
     transform: scale(1) translate(calc(var(--orbsize) / -2), calc(var(--orbsize) / -2));
+  }
+}
+
+.openInteract {
+  animation: interact var(--duration) forwards var(--sleek) 3s
+}
+@keyframes interact {
+  from {
+    transform: scale(1) translate(calc(var(--orbsize) / -2), calc(var(--orbsize) / -2));
+  }
+  to {
+    transform: scale(var(--interactScale));
   }
 }
