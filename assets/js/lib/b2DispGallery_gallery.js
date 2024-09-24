@@ -161,10 +161,10 @@
 
     // flag exception
     // check chain
-    // noflag                           false
-    // flag*sfw                         false
-    // flag*(0 OR default OR origin)    false
-    // nocatch                          true
+    // noflag                               false
+    // flag = "sfw"                         false
+    // flag = (0 OR "default" OR "origin")  false
+    // nocatch                              true
     //
     function hasExtraFlags(imgsFilename) {
         const flags = getFlags(imgsFilename);
@@ -180,7 +180,7 @@
     
     function disableLoader () {
         //loadMoreButton.disabled = true;
-        $(".wideGoTitle").html("Nothing else to load...")
+        $(".wideGoTitle").html("Nothing else to load or limit reached!...")
         $(loadMoreButton).css('pointer-events', 'none')
         setTimeout(() => {
             $(loadMoreButton).fadeOut()
