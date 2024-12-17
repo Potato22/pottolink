@@ -8,6 +8,7 @@ body {
   overflow-x: hidden;
   -webkit-user-select: none !important;
      -moz-user-select: none !important;
+      -ms-user-select: none !important;
           user-select: none !important;
 }
 
@@ -141,9 +142,12 @@ a:link, a:visited {
 .dynamicnav {
   position: sticky;
   top: 0;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
   padding: 0 1rem 0 0;
   z-index: 5;
   background: var(--alphabaseD);
@@ -182,8 +186,10 @@ a:link, a:visited {
 
 .buttongroup {
   position: relative;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
 }
 
 .nbutton {
@@ -227,8 +233,10 @@ a:link, a:visited {
   height: 100vh;
   position: fixed;
   z-index: 5;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
   display: none;
 }
 
@@ -275,8 +283,10 @@ a:link, a:visited {
   height: 40px;
   position: absolute;
   top: 0;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
   margin-top: 2rem;
 }
 
@@ -313,16 +323,21 @@ a:link, a:visited {
 }
 
 .mainboxfloater {
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
 .mainbox {
   background: var(--baseD);
   padding: 2rem 6rem;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
   transition: background 1s var(--sleek);
   width: 100%;
   max-width: 1920px;
@@ -368,9 +383,12 @@ a:link, a:visited {
 
 .linkcard {
   text-align: center;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
   overflow: visible;
   transition: all 0.5s var(--sleek) !important;
 }
@@ -414,9 +432,12 @@ a:link, a:visited {
 }
 
 .col {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 .customarrow {
@@ -661,8 +682,10 @@ a:link, a:visited {
   max-width: 100%;
   height: 100%;
   max-height: 100%;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
+  -ms-flex-align: end;
+      align-items: flex-end;
   padding: 0 1rem;
   background: linear-gradient(rgba(0, 0, 0, 0) 60%, var(--black));
 }
@@ -671,9 +694,12 @@ a:link, a:visited {
   position: relative;
   min-width: 100%;
   height: 100%;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  -ms-flex-align: end;
+      align-items: flex-end;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   padding-bottom: 1rem;
   font-family: var(--content);
   color: var(--textD);
@@ -695,16 +721,20 @@ a:link, a:visited {
   max-width: 100%;
   height: 100%;
   max-height: 100%;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
+  -ms-flex-align: end;
+      align-items: flex-end;
 }
 
 .thumbtextgroup {
   max-width: 100%;
   width: 100%;
   height: 20%;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   padding: 1rem;
   font-family: var(--content);
   color: var(--textD);
@@ -719,13 +749,15 @@ a:link, a:visited {
   color: var(--textD);
   box-sizing: border-box;
   border: solid 1px var(--textD);
+  display: -ms-flexbox;
   display: flex;
   font-size: 0.9em;
   font-family: var(--content);
   font-weight: 500;
   border-radius: 40px;
   display: flex;
-  align-items: center;
+  -ms-flex-align: center;
+      align-items: center;
   transition: all 0.15s;
   letter-spacing: -0.62pt;
 }
@@ -806,6 +838,7 @@ a:link, a:visited {
   height: 100%;
   -webkit-user-select: none;
   -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   transition: all 0.2s var(--sleek);
 }
@@ -833,10 +866,13 @@ a:link, a:visited {
   height: 100vh;
   position: fixed;
   z-index: 3;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
+  -ms-flex-align: end;
+      align-items: flex-end;
   -webkit-user-select: none;
   -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
   opacity: 0;
   transition: all 0.2s var(--sleek);
@@ -904,6 +940,7 @@ a:link, a:visited {
 }
 .floatwindows {
   text-align: center;
+  display: -ms-flexbox;
   display: flex;
   margin-left: 1em;
   padding: 0.1rem 0.8rem;
@@ -936,9 +973,12 @@ a:link, a:visited {
 .loadblock {
   width: 100%;
   height: 100vh;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   z-index: 200;
   background: var(--baseD);
   position: fixed;
@@ -1008,6 +1048,7 @@ a:link, a:visited {
   } */
 .initialloc {
   position: absolute;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 100vh;

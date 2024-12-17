@@ -1,10 +1,9 @@
 (() => {
     console.log('init');
 
-    // Define filtering variables
-    var filterNSFW = true;
-    var filterVersion = false;
-    var filterSketch = true;
+    let filterNSFW = true;
+    let filterVersion = false;
+    let filterSketch = true;
 
     async function fetchDisplay() {
         console.log('async fetchDisplay');
@@ -104,16 +103,14 @@
 
                 latestWorkGrid.replaceChildren(imgDataFragment);
                 $(".galleryLoadingInd").fadeOut();
-
-            } else {
-                // Handle the case when data is null
             }
         })
         .catch(error => {
             console.error('Error during fetch:', error);
+            $(".galleryLoadingInd").html("Fetching was successful but something still went wrong, not good news tell you that now. "+ error).removeClass('holdon');
         });
 
-    // Function to get flags from filename
+    // GET FLAGS
     function getFlags(input) {
         let ret = [];
         let entries = input.split(".").join(" ").split(" ");
@@ -125,7 +122,7 @@
         return ret;
     }
 
-    // Function to check if filename has extra flags
+    // DETECT "FLAGS"
     function hasExtraFlags(imgsFilename) {
         const flags = getFlags(imgsFilename);
         if (flags.length === 0) return false;

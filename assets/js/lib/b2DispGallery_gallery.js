@@ -145,6 +145,7 @@
         })
         .catch(error => {
             console.error('Error during fetch:', error);
+            $(".galleryLoadingInd").html("Fetching was successful but something still went wrong, not good news tell you that now. "+ error).removeClass('holdon');
         });
 
     // use '<filename> -<any>' as trigger for "flags"

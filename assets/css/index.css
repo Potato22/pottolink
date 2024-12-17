@@ -37,9 +37,12 @@
   height: 100vh;
   overflow: hidden;
   width: 100%;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
   filter: brightness(0.5);
 }
 .heroimage > div {
@@ -90,16 +93,20 @@
 }
 
 .forwardwrap {
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
+  -ms-flex-align: end;
+      align-items: flex-end;
   width: 100%;
   height: 100vh;
   position: absolute;
 }
 
 .forward {
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
   width: 100%;
   height: 60px;
   z-index: 1;
@@ -110,8 +117,10 @@
   height: 30px;
   border: solid 1px var(--white);
   border-radius: 10px;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 
 .dot {
@@ -175,9 +184,12 @@
 
 .buttonalign {
   height: 100%;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  -ms-flex-align: end;
+      align-items: flex-end;
 }
 
 /*IMAGEZOOM-------------------------------*/
@@ -233,10 +245,14 @@
 .zoomincontentAlign {
   width: 100%;
   height: 100%;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
   cursor: zoom-out;
 }
 
@@ -255,9 +271,12 @@
 }
 /*IMAGEZOOM-------------------------------*/
 .extraWrap {
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
   max-width: 1920px;
 }
 

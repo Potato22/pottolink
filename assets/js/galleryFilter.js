@@ -28,7 +28,7 @@ const dataVersion = localStorage.getItem("filterVersion");
 
 function switchUpdate(switchChange) {
     $("#reloadButton").addClass("reloadReady")
-    var whichSwitch = this.id
+    let whichSwitch = this.id
     if (switchChange.target.checked) {
         switch (whichSwitch) {
             case "nsfwFTT":
