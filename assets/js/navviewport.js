@@ -87,7 +87,7 @@ function chapter() {
         extrabool = false;
     }
 
-    console.log('creatbool', createbool, '\n gallbool', gallbool, '\n commbool', commbool, '\n triviabool', triviabool, '\n extrabool', extrabool )
+    //console.log('creatbool', createbool, '\n gallbool', gallbool, '\n commbool', commbool, '\n triviabool', triviabool, '\n extrabool', extrabool )
     //console.log('createbool %s, gallbool %s, triviabool %s', createbool, gallbool, triviabool, extrabool)
 
     const sections = [
