@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 function zooming() {
     $(".zoomindimmer").fadeIn(200), $(".zoomin").show(), $(".dynamicnav").addClass("navHide")
 }

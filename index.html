@@ -5,7 +5,7 @@
     <title>Potto</title>
     <meta name="title" content="Potto" />
     <meta name="description" content="As weird as a name can get." />
-    <link rel="icon" type="image/png" sizes="500x500" href="assets/img/local/pottoceramic.png">
+    <link rel="icon" type="image/png" sizes="500x500" href="src/img/local/pottoceramic.png">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,27 +14,36 @@
     <meta property="og:url" content="https://pottoart.uk/" />
     <meta property="og:title" content="Potto" />
     <meta property="og:description" content="As weird as a name can get." />
-    <meta property="og:image" content="https://raw.githubusercontent.com/Potato22/pottolink/master/assets/img/content/trainstation.jpg" />
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/Potato22/pottolink/master/src/img/content/trainstation.jpg" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://pottoart.uk/" />
     <meta property="twitter:title" content="Potto" />
     <meta property="twitter:description" content="As weird as a name can get." />
-    <meta property="twitter:image" content="https://raw.githubusercontent.com/Potato22/pottolink/master/assets/img/content/trainstation.jpg" />
+    <meta property="twitter:image"
+        content="https://raw.githubusercontent.com/Potato22/pottolink/master/src/img/content/trainstation.jpg" />
 
-    <script src="assets/js/lib/jquery.min.js"></script>
+    <!-- <script src="src/js/lib/jquery.min.js"></script> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <link rel="stylesheet" href="assets/css/global/root.css">
-    <link rel="stylesheet" href="assets/css/index.css">
-    <script src="assets/js/navviewport.js" defer></script>
-    <script src="assets/js/themetoggle.js" defer></script>
+    <link rel="stylesheet" href="src/css/global/root.css">
+    <link rel="stylesheet" href="src/css/index.css">
 
-    <script src="/assets/orb/poc.mjs" type="module"></script>
+    <script type="module" src="src/js/navviewport.js" defer></script>
+    <script type="module" src="src/js/themetoggle.js" defer></script>
+    <script type="module" src="src/js/lib/b2DispGallery_index.js"></script>
+    <script type="module" src="src/js/lib/aosconfig.js" defer></script>
+    <script type="module" src="src/js/lib/smooth-scroll.js"></script>
+    <script type="module" src="src/js/zoomtrigger.js" defer></script>
 
-    <script>
+    <script src="/src/orb/poc.mjs" type="module"></script>
+
+    <script type="module">
+        import $ from "jquery"
+
         //var windowH = $(window).width();
         //console.log(windowH > 740)
         //if (windowH >= 740) {
@@ -78,11 +87,11 @@
     <!-- START -->
     <div id="hello">
         <div class="heroimage">
-            <div style="background-image:url(assets/img/content/grow.jpg)"></div>
-            <div style="background-image:url(assets/img/content/izzy.jpg)"></div>
-            <div style="background-image:url(assets/img/content/road.jpg)"></div>
-            <div style="background-image:url(assets/img/content/warmsnow.jpg)"></div>
-            <div style="background-image:url(assets/img/content/trainstation.jpg)"></div>
+            <div style="background-image:url(src/img/content/grow.jpg)"></div>
+            <div style="background-image:url(src/img/content/izzy.jpg)"></div>
+            <div style="background-image:url(src/img/content/road.jpg)"></div>
+            <div style="background-image:url(src/img/content/warmsnow.jpg)"></div>
+            <div style="background-image:url(src/img/content/trainstation.jpg)"></div>
         </div>
         <div class="hero">
             <div class="theactualhello" data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-right">Potto
@@ -179,7 +188,7 @@
             <div class="cardgrid">
                 <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out"
                     class="cards dynamic-tall-mediumwide">
-                    <img loading="" class="imgs" src="assets/img/content/hi.jpg">
+                    <img loading="" class="imgs" src="src/img/content/hi.jpg">
                 </div>
                 <div data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-right"
                     class="cards invis textcard widecard talltext">
@@ -189,7 +198,7 @@
                 <div class="talltext">you call it, I got your back.</div> -->
                 </div>
                 <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards backgroundtext">
-                    <img loading="" class="imgs rightoffset" src="assets/img/content/twt1.jpg">
+                    <img loading="" class="imgs rightoffset" src="src/img/content/twt1.jpg">
                     <!-- ### BACKGROUNDTEXT CLASS WILL USE THE CONTENTS BELOW -->
                     <div class="textcontainer">
                         <div class="textgroup">
@@ -212,7 +221,7 @@
                     </div>
                 </div>
                 <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards backgroundtext">
-                    <img loading="" class="imgs rightoffset" src="assets/img/content/twt2.jpg">
+                    <img loading="" class="imgs rightoffset" src="src/img/content/twt2.jpg">
                     <!-- ### BACKGROUNDTEXT CLASS WILL USE THE CONTENTS BELOW -->
                     <div class="textcontainer">
                         <div class="textgroup">
@@ -235,7 +244,7 @@
                     </div>
                 </div>
                 <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards backgroundtext">
-                    <img loading="" class="imgs leftoffset" src="assets/img/content/bsky.jpg">
+                    <img loading="" class="imgs leftoffset" src="src/img/content/bsky.jpg">
                     <!-- ### BACKGROUNDTEXT CLASS WILL USE THE CONTENTS BELOW -->
                     <div class="textcontainer">
                         <div class="textgroup">
@@ -258,7 +267,7 @@
                     </div>
                 </div>
                 <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards backgroundtext">
-                    <img loading="" class="imgs rightoffset" src="assets/img/content/tmb.jpg">
+                    <img loading="" class="imgs rightoffset" src="src/img/content/tmb.jpg">
                     <!-- ### BACKGROUNDTEXT CLASS WILL USE THE CONTENTS BELOW -->
                     <div class="textcontainer">
                         <div class="textgroup">
@@ -281,7 +290,7 @@
                     </div>
                 </div>
                 <!-- <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards backgroundtext">
-                    <img loading="" class="imgs rightoffset" src="assets/img/content/mst.jpg">
+                    <img loading="" class="imgs rightoffset" src="src/img/content/mst.jpg">
                     <div class="textcontainer">
                         <div class="textgroup">
                             <div class="imgtext">
@@ -303,7 +312,7 @@
                     </div>
                 </div> -->
                 <!-- <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards backgroundtext">
-                    <img loading="" class="imgs rightoffset" src="assets/img/content/da.jpg">
+                    <img loading="" class="imgs rightoffset" src="src/img/content/da.jpg">
                     <div class="textcontainer">
                         <div class="textgroup">
                             <div class="imgtext">
@@ -325,7 +334,7 @@
                     </div>
                 </div> -->
                 <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards backgroundtext">
-                    <img loading="" class="imgs leftoffset" src="assets/img/content/pix.jpg">
+                    <img loading="" class="imgs leftoffset" src="src/img/content/pix.jpg">
                     <!-- ### BACKGROUNDTEXT CLASS WILL USE THE CONTENTS BELOW -->
                     <div class="textcontainer">
                         <div class="textgroup">
@@ -348,7 +357,7 @@
                     </div>
                 </div>
                 <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards backgroundtext">
-                    <img loading="" class="imgs rightoffset" src="assets/img/content/kf.jpg">
+                    <img loading="" class="imgs rightoffset" src="src/img/content/kf.jpg">
                     <!-- ### BACKGROUNDTEXT CLASS WILL USE THE CONTENTS BELOW -->
                     <div class="textcontainer">
                         <div class="textgroup">
@@ -396,8 +405,8 @@
                     <div class="titletextcard">Gallery.</div>
                     <div class="tcsubquote">::Latest few works</div>
                 </div>
-                <a href="./gallery" class="cards linkcard" data-aos-duration="500"
-                    data-aos-easing="sleek" data-aos="fade-right">
+                <a href="./gallery" class="cards linkcard" data-aos-duration="500" data-aos-easing="sleek"
+                    data-aos="fade-right">
                     <div style="color: var(--textD);" class="textcard invis bigger col">
                         <b>View All</b>
                         <svg class="customarrow" viewBox="0 0 10 10">
@@ -436,7 +445,7 @@
                     <div class="tcsubquote">::Previews and past orders</div>
                 </div>
                 <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards backgroundtext">
-                    <img loading="" class="imgs leftoffset" src="assets/img/content/cm5.jpg">
+                    <img loading="" class="imgs leftoffset" src="src/img/content/cm5.jpg">
                     <!-- ### BACKGROUNDTEXT CLASS WILL USE THE CONTENTS BELOW -->
                     <div class="textcontainer">
                         <div class="textgroup">
@@ -448,7 +457,7 @@
                     </div>
                 </div>
                 <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards backgroundtext">
-                    <img loading="" class="imgs" src="assets/img/content/cm4.jpg">
+                    <img loading="" class="imgs" src="src/img/content/cm4.jpg">
                     <!-- ### BACKGROUNDTEXT CLASS WILL USE THE CONTENTS BELOW -->
                     <div class="textcontainer">
                         <div class="textgroup">
@@ -460,7 +469,7 @@
                     </div>
                 </div>
                 <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards backgroundtext">
-                    <img loading="" class="imgs" src="assets/img/content/cm1.jpg">
+                    <img loading="" class="imgs" src="src/img/content/cm1.jpg">
                     <!-- ### BACKGROUNDTEXT CLASS WILL USE THE CONTENTS BELOW -->
                     <div class="textcontainer">
                         <div class="textgroup">
@@ -472,13 +481,13 @@
                     </div>
                 </div>
                 <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards">
-                    <img loading="" class="imgs" src="assets/img/content/cm2.jpg">
+                    <img loading="" class="imgs" src="src/img/content/cm2.jpg">
                 </div>
                 <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards mediumwidecard">
-                    <img loading="" class="imgs" src="assets/img/content/cm3.jpg">
+                    <img loading="" class="imgs" src="src/img/content/cm3.jpg">
                 </div>
                 <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards">
-                    <img loading="" class="imgs" src="assets/img/content/cm6.jpg">
+                    <img loading="" class="imgs" src="src/img/content/cm6.jpg">
                 </div>
 
                 <a target="_blank" href="https://potato22.github.io/commission" class="cards linkcard"
@@ -503,8 +512,7 @@
                 </div>
                 <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out"
                     class="cards invis dynamic-narrowvp-wide-tall">
-                    <video preload="none" autoplay muted loop class="imgs"
-                        src="assets/img/content/ceramic.webm"></video>
+                    <video preload="none" autoplay muted loop class="imgs" src="src/img/content/ceramic.webm"></video>
                 </div>
                 <div class="cards textcard invis widecard dynamic-narrowvp-wide-tall tcregread">
                     <div class="titletextcard">Who?</div>
@@ -517,7 +525,7 @@
             </div>
             <div class="cardgrid">
                 <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards tallcard">
-                    <img loading="" class="imgs leftoffset" src="assets/img/content/trainstation-b.jpg">
+                    <img loading="" class="imgs leftoffset" src="src/img/content/trainstation-b.jpg">
                 </div>
                 <div class="cards textcard invis widecard tcregread">
                     <div class="titletextcard">Oulie Mareota</div>
@@ -526,7 +534,7 @@
                 </div>
                 <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out"
                     class="cards backgroundtext widecard">
-                    <img loading="" class="imgs" src="assets/img/content/grow.jpg">
+                    <img loading="" class="imgs" src="src/img/content/grow.jpg">
                     <!-- ### BACKGROUNDTEXT CLASS WILL USE THE CONTENTS BELOW -->
                     <div class="textcontainer">
                         <div class="textgroup">
@@ -569,7 +577,7 @@
                     </div>
                 </div>
                 <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards mediumwidecard">
-                    <img loading="" class="imgs" src="assets/img/content/doodle8.jpg">
+                    <img loading="" class="imgs" src="src/img/content/doodle8.jpg">
                 </div>
             </div>
             <!-- EXTRA -->
@@ -588,35 +596,36 @@
                     </div>
                     <video preload="none" autoplay muted loop data-aos="zoom-in"
                         class="imgs self imgz cards imgcard aos-init aos-animate bigcard" orbreact="true"
-                        src="assets/img/content/3d/neonixEasy.webm"
+                        src="src/img/content/3d/neonixEasy.webm"
                         alt="An advert-like presentation of a custom nixie tube clock design."></video>
                     <video preload="none" autoplay muted loop data-aos="zoom-in"
                         class="imgs self imgz cards imgcard aos-init aos-animate" orbreact="true"
-                        src="assets/img/content/3d/curt.webm"
+                        src="src/img/content/3d/curt.webm"
                         alt="Fabric curtain simulation demo in an indoor setting."></video>
                     <img loading="lazy" data-aos="zoom-in" class="imgs self imgz cards imgcard aos-init aos-animate"
-                        orbreact="true" src="assets/img/content/3d/qublast.jpg"
+                        orbreact="true" src="src/img/content/3d/qublast.jpg"
                         alt="'QUBLAST' Inspired by the hacking tool alike 'FLipper Zero' combined with a mini oscilloscope multimeter/multitool.">
                     <img loading="lazy" data-aos="zoom-in"
-                        class="imgs self imgz cards imgcard aos-init aos-animate mediumwidecard topoffset" orbreact="true"
-                        src="assets/img/content/3d/muzen.jpg"
+                        class="imgs self imgz cards imgcard aos-init aos-animate mediumwidecard topoffset"
+                        orbreact="true" src="src/img/content/3d/muzen.jpg"
                         alt="A love letter to Muzen's 'Wild Jeep' Bluetooth speaker design bonus with a pile of my nixie tube models next to it.">
                     <img loading="lazy" data-aos="zoom-in" class="imgs self imgz cards imgcard aos-init aos-animate"
-                        orbreact="true" src="assets/img/content/3d/wacom.jpg"
+                        orbreact="true" src="src/img/content/3d/wacom.jpg"
                         alt="A high-detail modeling challenge of a Wacom Intuos Mini.">
                     <video preload="none" autoplay muted loop data-aos="zoom-in"
                         class="imgs self imgz cards imgcard aos-init aos-animate mediumwidecard" orbreact="true"
-                        src="assets/img/content/3d/coolfab.webm"
+                        src="src/img/content/3d/coolfab.webm"
                         alt="A more extensive fabric simulation with added detail, very very 'added' detail."></video>
                     <video preload="none" autoplay muted loop data-aos="zoom-in"
                         class="imgs self imgz cards imgcard aos-init aos-animate" orbreact="true"
-                        src="assets/img/content/3d/neonix.webm"
+                        src="src/img/content/3d/neonix.webm"
                         alt="'Neo-Classic' Design Nixie tube clock with functioning controller."></video>
                     <img loading="lazy" data-aos="zoom-in" class="imgs self imgz cards imgcard aos-init aos-animate"
-                        orbreact="true" src="assets/img/content/3d/rob.jpg"
+                        orbreact="true" src="src/img/content/3d/rob.jpg"
                         alt="Modelling challenge of a spherical robot.">
-                    <img loading="lazy" data-aos="zoom-in" class="imgs self imgz cards imgcard aos-init aos-animate widecard"
-                        orbreact="true" src="assets/img/content/3d/veh.jpg"
+                    <img loading="lazy" data-aos="zoom-in"
+                        class="imgs self imgz cards imgcard aos-init aos-animate widecard" orbreact="true"
+                        src="src/img/content/3d/veh.jpg"
                         alt="Modelling challenge to create an exotic vehicle, probably for antartic - or just another planet...">
                 </div>
                 <!-- CARDGRID -->
@@ -628,60 +637,62 @@
                     </div>
                     <video preload="none" autoplay muted loop data-aos="zoom-in"
                         class="imgs self imgz cards imgcard aos-init aos-animate" orbreact="true"
-                        src="assets/img/content/modesig/c.webm"
+                        src="src/img/content/modesig/c.webm"
                         alt="Motion design improvisation out of a letter 'C'."></video>
                     <video preload="none" autoplay muted loop data-aos="zoom-in"
                         class="imgs self imgz cards imgcard aos-init aos-animate" orbreact="true"
-                        src="assets/img/content/modesig/retroux.webm"
+                        src="src/img/content/modesig/retroux.webm"
                         alt="<a target='_blank' class='zoomaltlink' href='https://www.youtube.com/watch?v=JW4epapyoT4'>(View full here!)</a><br>It looks horrid in quality (And small!), but not unintentional. It is infact to emulate the old school screen capture of a Nintendo DS back in the days of YouTube. The 'UX' itself in the background isn't from any real game. It simply is a mockup of a UX/UI for an NDS game I completely made up. -- Music is <a target='_blank' class='zoomaltlink' href='https://www.youtube.com/watch?v=uzSgbomtdcg'>Configuration by DV-i</a>"></video>
                     <video preload="none" autoplay muted loop data-aos="zoom-in"
                         class="imgs self imgz cards imgcard aos-init aos-animate bigcard reducevol" orbreact="true"
-                        src="assets/img/content/modesig/moonlight.webm"
+                        src="src/img/content/modesig/moonlight.webm"
                         alt="<a target='_blank' class='zoomaltlink' href='https://www.youtube.com/watch?v=Mh1vdgCz-ww'>(View full here!)<br></a> Unconventional dynamic music visualizer out of the song <a target='_blank' class='zoomaltlink' href='https://www.youtube.com/watch?v=-IjbWJwj0Wc'>'Moonlight' by 7dB</a>, syncing the song by a literal bpm clock on the bottom left I added. and add several unique quirks on some synth instruments or song progression."></video>
                     <video preload="none" autoplay muted loop data-aos="zoom-in"
                         class="imgs self imgz cards imgcard aos-init aos-animate mediumwidecard" orbreact="true"
-                        src="assets/img/content/modesig/ps5.webm"
+                        src="src/img/content/modesig/ps5.webm"
                         alt="This is a mockup of Sony's PS5 UX/UI when a crash of a game occurs. All the artifacts are part of the video."></video>
                     <video preload="none" autoplay muted loop data-aos="zoom-in"
                         class="imgs self imgz cards imgcard aos-init aos-animate" orbreact="true"
-                        src="assets/img/content/modesig/jh.webm"
+                        src="src/img/content/modesig/jh.webm"
                         alt="One day I woke up and decided to make my good friend an animated logo out of nowhere."></video>
                     <video preload="none" autoplay muted loop data-aos="zoom-in"
                         class="imgs self imgz cards imgcard aos-init aos-animate mediumwidecard" orbreact="true"
-                        src="assets/img/content/modesig/1000.mp4"
+                        src="src/img/content/modesig/1000.mp4"
                         alt="This was created to celebrate my social media followers reaching and above 1000, followed with me launching a free vector art raffle for a selected few people."></video>
                     <video preload="none" autoplay muted loop data-aos="zoom-in"
                         class="imgs self imgz cards imgcard aos-init aos-animate" orbreact="true"
-                        src="assets/img/content/modesig/EP.webm"
+                        src="src/img/content/modesig/EP.webm"
                         alt="This is part of an EP (Extended Playlist) songs (yes I occassionally make music too sometimes.) I published that's still a big part of my heart."></video>
 
                 </div>
             </div>
-            <!-- <script src="assets/js/lib/dagallery.js"></script> -->
-            <script src="assets/js/lib/b2DispGallery_index.js"></script>
-            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-            <script src="assets/js/lib/aosconfig.js" defer></script>
-            <script src="assets/js/lib/smooth-scroll.js"></script>
-            <script src="assets/js/zoomtrigger.js"></script>
+            <!-- <script src="src/js/lib/dagallery.js"></script> -->
+            <!-- <script type="module" src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
+            <script type="module">
+                import AOS from 'aos';
+                import 'aos/dist/aos.css'; // You can also use <link> for styles
+                // ..
+                AOS.init();
+            </script>
 
-            <script>
+            <script type="module">
+                import $ from "jquery"
                 $('.openExtraButton').click(function () {
                     $(this).addClass('opensExtraforU')
                     $('.extraWrap').show()
                 });
             </script>
-            <script>
+            <script type="module">
+                import $ from "jquery"
                 var scroll = new SmoothScroll('a[href*="#"]', {
                     speed: 800,
                 });
             </script>
-            <script>
+            <script type="module">
+                import $ from "jquery"
                 $(document).ready(function () {
                     $(".loadblock").fadeOut('fast');
                 })
-            </script>
-            <script defer>
-                AOS.init();
             </script>
         </div>
     </div>

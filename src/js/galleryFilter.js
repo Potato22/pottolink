@@ -1,3 +1,4 @@
+import $ from "jquery";
 //const ntoggleSwitch = document.querySelector("#ntoggle");
 //const currentNstate = localStorage.getItem("nstate");
 

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Potto</title>
+    <meta name="title" content="Potto" />
+    <meta name="description" content="As weird as a name can get." />
+    <link rel="icon" type="image/png" sizes="500x500" href="./assets/pottoceramic-CsHvJ3If.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- OG -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pottoart.uk/" />
+    <meta property="og:title" content="Potto" />
+    <meta property="og:description" content="As weird as a name can get." />
+    <meta property="og:image" content="https://raw.githubusercontent.com/Potato22/pottolink/master/src/img/content/trainstation.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://pottoart.uk/" />
+    <meta property="twitter:title" content="Potto" />
+    <meta property="twitter:description" content="As weird as a name can get." />
+    <meta property="twitter:image" content="https://raw.githubusercontent.com/Potato22/pottolink/master/src/img/content/trainstation.jpg" />
+
+    <script src="src/js/lib/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+
+    <script>
+        //var windowH = $(window).width();
+        //console.log(windowH > 740)
+        //if (windowH >= 740) {
+        //}
+        $(document).scroll(function () {
+            var scrollDistance = $(this).scrollTop();
+            //console.log(scrollDistance)
+            if (scrollDistance >= 300) {
+                $('.heroimage, .forwardwrap').fadeOut();
+                $('.themetogglecont').css({
+                    'opacity': '1'
+                });
+            } else {
+                $('.heroimage, .forwardwrap').fadeIn();
+                $('.themetogglecont').css({
+                    'opacity': '0'
+                });
+            }
+        });
+    </script>
+  <script type="module" crossorigin src="./assets/main-iyj-C1k0.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/poc-CFonUFvD.js">
+  <link rel="stylesheet" crossorigin href="./assets/poc-ICgYrsmG.css">
+  <link rel="stylesheet" crossorigin href="./assets/main-BA0_6Etu.css">
+</head>
+
+<body>
+    <!-- loader -->
+    <div class="loadblock">
+        <div class="outer"></div>
+        <div class="inner"></div>
+    </div>
+    <!-- orb cursor -->
+    <orb-cursor speed=".2"></orb-cursor>
+    <!-- theme toggle -->
+    <div class="themetogglecont">
+        <div class="togglecont" orbReact="true">
+            <div class="splash"></div>
+            <label class="checkboxtrig">
+                <input type="checkbox" id="ttogle" />
+                <div class="material-icons-outlined icon">light_mode</div>
+        </div>
+    </div>
+
+    <!-- START -->
+    <div id="hello">
+        <div class="heroimage">
+            <div style="background-image:url(./assets/grow-CCyfA1L3.jpg)"></div>
+            <div style="background-image:url(./assets/izzy-C31q4kqU.jpg)"></div>
+            <div style="background-image:url(./assets/road-DoQA33EY.jpg)"></div>
+            <div style="background-image:url(./assets/warmsnow-BvTgOasp.jpg)"></div>
+            <div style="background-image:url(./assets/trainstation-C5nre3RN.jpg)"></div>
+        </div>
+        <div class="hero">
+            <div class="theactualhello" data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-right">Potto
+            </div>
+            <!-- <div class="dialogue" data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-right"
+                data-aos-delay="100">Sheridan</div> -->
+            <div class="uh" data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-right" data-aos-delay="200">
+                Jack of all odd trades, masters of none.</div>
+        </div>
+    </div>
+    <!-- forward -->
+    <a class="forwardattrwrap" href="#about">
+        <div class="forwardwrap">
+            <div class="forward" orbReact="true">
+                <div class="capsule">
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+    </a>
+    <!-- creationdialog -->
+    <div class="dimmer">
+        <div class="creationdialog">
+            <div class="exit">
+                <div class="xcont">
+                    <div class="x"></div>
+                </div>
+            </div>
+            <div class="cbuttongroup">
+                <a href="#gall">
+                    <div class="illus cbutton block s2-1">GALLERY
+                    </div>
+                </a>
+                <a href="#comm">
+                    <div class="anim cbutton block s2-2">COMMISSION
+                    </div>
+                </a>
+                <a href="#trivia">
+                    <div class="sket cbutton block s2-3">TRIVIA
+                    </div>
+                </a>
+                <a href="#extra">
+                    <div class="extra cbutton block s2-4">EXTRA
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="fader"></div>
+    <!--IMGZOOMIN-->
+    <div class="zoomindimmer"></div>
+    <div class="zoomin">
+        <div class="zoomincontentAlign">
+            <div class="zoomDisplay">
+                <img loading="lazy" class="zoomincontent" src="">
+                <video preload="none" autoplay loop class="zoomincontent" src="">
+            </div>
+            <div class="zoomalttext"></div>
+        </div>
+    </div>
+
+    <nav class="dynamicnav navOff">
+        <a id="nlogo">
+            <svg viewBox="0 0 132.29 132.29">
+                <g transform="translate(108.91 -397.83)">
+                    <path class="npotto"
+                        d="m-81.612 397.83c-15.122 0-27.297 12.174-27.297 27.297v77.699c0 15.122 12.174 27.297 27.297 27.297h30.661c4.5367 0 8.1886-3.6525 8.1886-8.1892v-23.31c0-4.5367 3.6525-8.1886 8.1892-8.1886h30.66c15.122 0 27.297-12.174 27.297-27.297v-38.011c0-15.122-12.174-27.297-27.297-27.297zm0 10.054h77.699c9.5576 0 17.242 7.6848 17.242 17.242v35.441c0 10.976-8.8364 19.813-19.813 19.813h-28.09c-10.101 0-18.243 8.1411-18.243 18.243v13.256c0 4.5367-3.652 8.1892-8.1886 8.1892h-20.606c-9.5576 0-17.242-7.6848-17.242-17.242v-77.699c0-9.5576 7.6848-17.242 17.242-17.242z"
+                        stroke-width=".22038" />
+                </g>
+            </svg>
+        </a>
+        <div class="buttongroup">
+            <a href="#about">
+                <div class="nbutton about">Hello.
+                    <span class="strikethrough s1"></span>
+                </div>
+            </a>
+            <a href="#c">
+                <div class="nbutton creation">[:::]
+                    <span class="strikethrough s2"></span>
+                </div>
+            </a>
+            <!-- <a href="#contact">
+                <div class="nbutton contact">Contact
+                    <span class="strikethrough s3"></span>
+                </div>
+            </a> -->
+        </div>
+    </nav>
+    <div id="about" class="anchor"></div>
+    <div class="mainboxfloater">
+        <div class="mainbox">
+            <!-- CARDGRID -->
+            <div class="cardgrid">
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out"
+                    class="cards dynamic-tall-mediumwide">
+                    <img loading="" class="imgs" src="./assets/hi-BRxDBy7d.jpg">
+                </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-right"
+                    class="cards invis textcard widecard talltext">
+                    <div class="titletextcard tcbigger">Hello!</div>
+                    <div class="titletextcard tcregread">Here are all the places you can find me.</div>
+                    <!-- <div class="titletextcard">FRONT-END sket,</div>
+                <div class="talltext">you call it, I got your back.</div> -->
+                </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards backgroundtext">
+                    <img loading="" class="imgs rightoffset" src="./assets/twt1-DxFWgpwu.jpg">
+                    <!-- ### BACKGROUNDTEXT CLASS WILL USE THE CONTENTS BELOW -->
+                    <div class="textcontainer">
+                        <div class="textgroup">
+                            <div class="imgtext">
+                                twitter.potto2292
+                            </div>
+                            <div class="buttonalign">
+                                <a href="https://twitter.com/Potto2292">
+                                    <div class="go">
+                                        <svg class="dynamicarrow" viewBox="0 0 10 10">
+                                            <g>
+                                                <path class="line" d="M0 5h7"></path>
+                                                <path class="arrow" d="M1 1l4 4-4 4"></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards backgroundtext">
+                    <img loading="" class="imgs rightoffset" src="./assets/twt2-B1-QupJg.jpg">
+                    <!-- ### BACKGROUNDTEXT CLASS WILL USE THE CONTENTS BELOW -->
+                    <div class="textcontainer">
+                        <div class="textgroup">
+                            <div class="imgtext">
+                                twitter.pottosmuts🔞
+                            </div>
+                            <div class="buttonalign">
+                                <a href="https://twitter.com/pottosmuts">
+                                    <div class="go">
+                                        <svg class="dynamicarrow" viewBox="0 0 10 10">
+                                            <g>
+                                                <path class="line" d="M0 5h7"></path>
+                                                <path class="arrow" d="M1 1l4 4-4 4"></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards backgroundtext">
+                    <img loading="" class="imgs leftoffset" src="./assets/bsky-D5SICA_v.jpg">
+                    <!-- ### BACKGROUNDTEXT CLASS WILL USE THE CONTENTS BELOW -->
+                    <div class="textcontainer">
+                        <div class="textgroup">
+                            <div class="imgtext">
+                                bsky.potto
+                            </div>
+                            <div class="buttonalign">
+                                <a href="https://bsky.app/profile/potto.bsky.social">
+                                    <div class="go">
+                                        <svg class="dynamicarrow" viewBox="0 0 10 10">
+                                            <g>
+                                                <path class="line" d="M0 5h7"></path>
+                                                <path class="arrow" d="M1 1l4 4-4 4"></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards backgroundtext">
+                    <img loading="" class="imgs rightoffset" src="./assets/tmb-Bdd8skRL.jpg">
+                    <!-- ### BACKGROUNDTEXT CLASS WILL USE THE CONTENTS BELOW -->
+                    <div class="textcontainer">
+                        <div class="textgroup">
+                            <div class="imgtext">
+                                tumblr.potto22
+                            </div>
+                            <div class="buttonalign">
+                                <a href="https://potto22.tumblr.com">
+                                    <div class="go">
+                                        <svg class="dynamicarrow" viewBox="0 0 10 10">
+                                            <g>
+                                                <path class="line" d="M0 5h7"></path>
+                                                <path class="arrow" d="M1 1l4 4-4 4"></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards backgroundtext">
+                    <img loading="" class="imgs rightoffset" src="src/img/content/mst.jpg">
+                    <div class="textcontainer">
+                        <div class="textgroup">
+                            <div class="imgtext">
+                                mastodon.art.potto
+                            </div>
+                            <div class="buttonalign">
+                                <a href="https://mastodon.art/@potto">
+                                    <div class="go">
+                                        <svg class="dynamicarrow" viewBox="0 0 10 10">
+                                            <g>
+                                                <path class="line" d="M0 5h7"></path>
+                                                <path class="arrow" d="M1 1l4 4-4 4"></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards backgroundtext">
+                    <img loading="" class="imgs rightoffset" src="src/img/content/da.jpg">
+                    <div class="textcontainer">
+                        <div class="textgroup">
+                            <div class="imgtext">
+                                da.potato2292
+                            </div>
+                            <div class="buttonalign">
+                                <a href="https://www.deviantart.com/potato2292">
+                                    <div class="go">
+                                        <svg class="dynamicarrow" viewBox="0 0 10 10">
+                                            <g>
+                                                <path class="line" d="M0 5h7"></path>
+                                                <path class="arrow" d="M1 1l4 4-4 4"></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards backgroundtext">
+                    <img loading="" class="imgs leftoffset" src="./assets/pix-JPClAEmp.jpg">
+                    <!-- ### BACKGROUNDTEXT CLASS WILL USE THE CONTENTS BELOW -->
+                    <div class="textcontainer">
+                        <div class="textgroup">
+                            <div class="imgtext">
+                                pix.potto22
+                            </div>
+                            <div class="buttonalign">
+                                <a href="https://www.pixiv.net/en/users/60452008">
+                                    <div class="go">
+                                        <svg class="dynamicarrow" viewBox="0 0 10 10">
+                                            <g>
+                                                <path class="line" d="M0 5h7"></path>
+                                                <path class="arrow" d="M1 1l4 4-4 4"></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards backgroundtext">
+                    <img loading="" class="imgs rightoffset" src="./assets/kf-rDbxgdIh.jpg">
+                    <!-- ### BACKGROUNDTEXT CLASS WILL USE THE CONTENTS BELOW -->
+                    <div class="textcontainer">
+                        <div class="textgroup">
+                            <div class="imgtext">
+                                kofi.potto
+                            </div>
+                            <div class="buttonalign">
+                                <a href="https://ko-fi.com/potto22">
+                                    <div class="go">
+                                        <svg class="dynamicarrow" viewBox="0 0 10 10">
+                                            <g>
+                                                <path class="line" d="M0 5h7"></path>
+                                                <path class="arrow" d="M1 1l4 4-4 4"></path>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-left"
+                    class="cards textcard invis tcreg">Extra Links
+                    <ul>
+                        <li>
+                            <a style="color: var(--accentD); font-weight: 600;" href="#comm">Commission</a>
+                        </li>
+                        <li>
+                            <a style="color: var(--accentD); font-weight: 600;"
+                                href="https://pottoboard.notion.site/fa777b6bc70d42c69b190b1206e2b12e?  v=bee67dac28f54c64a0b7e0610d41a18c">Commission
+                                List</a>
+                        </li>
+                        <li>
+                            <a style="color: var(--accentD); font-weight: 600;"
+                                href="https://potato22.github.io/retroux">???????</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- CARDGRID -->
+            <div id="create" class="anchor"></div>
+            <div class="cardgrid" id="gall">
+                <div class="cards invis textcard superwidecard">
+                    <del>Less talk,</del><br>
+                    <div class="titletextcard">Gallery.</div>
+                    <div class="tcsubquote">::Latest few works</div>
+                </div>
+                <a href="./gallery" class="cards linkcard" data-aos-duration="500"
+                    data-aos-easing="sleek" data-aos="fade-right">
+                    <div style="color: var(--textD);" class="textcard invis bigger col">
+                        <b>View All</b>
+                        <svg class="customarrow" viewBox="0 0 10 10">
+                            <g>
+                                <path class="line" d="M0 5h7"></path>
+                                <path class="arrow" d="M1 1l4 4-4 4"></path>
+                            </g>
+                        </svg>
+                    </div>
+                </a>
+                <!-- <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards widecard textcard tcbigger">View all works in the Gallery page with optional lossless downloads.</div> -->
+                <div class="cards textcard invis widecard">
+                    <div class="titletextcard">Gallery</div>
+                    View all recent artworks in the Gallery Page. Includes lossless viewing and downloads.
+                </div>
+            </div>
+            <div class="galleryLoadingInd tcreg"></div>
+            <div class="cardgrid" id="latestWorks"></div>
+            <a href="./gallery" class="wideGo" orbreact="true">
+                <div class="wideGoTitle">Open full archive
+                    <svg class="dynamicarrow" viewBox="0 0 10 10">
+                        <g>
+                            <path class="line" d="M0 5h7"></path>
+                            <path class="arrow" d="M1 1l4 4-4 4"></path>
+                        </g>
+                    </svg>
+                </div>
+            </a>
+
+            <div class="cardgrid" id="daImg" data-da-gallery="Potato2292/85705326"></div>
+            <!-- CARDGRID -->
+            <div id="comm" class="anchor"></div>
+            <div class="cardgrid">
+                <div class="cards invis textcard superwidecard">
+                    <div class="titletextcard">Commission</div>
+                    <div class="tcsubquote">::Previews and past orders</div>
+                </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards backgroundtext">
+                    <img loading="" class="imgs leftoffset" src="./assets/cm5-6NvOyWZN.jpg">
+                    <!-- ### BACKGROUNDTEXT CLASS WILL USE THE CONTENTS BELOW -->
+                    <div class="textcontainer">
+                        <div class="textgroup">
+                            <div class="imgtext">
+                                Sketchbook<br>
+                                <b>$10-20/sketch</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards backgroundtext">
+                    <img loading="" class="imgs" src="./assets/cm4-DVRSNs14.jpg">
+                    <!-- ### BACKGROUNDTEXT CLASS WILL USE THE CONTENTS BELOW -->
+                    <div class="textcontainer">
+                        <div class="textgroup">
+                            <div class="imgtext">
+                                Portrait<br>
+                                <b>$20-50</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards backgroundtext">
+                    <img loading="" class="imgs" src="./assets/cm1-Dnp2XZ9y.jpg">
+                    <!-- ### BACKGROUNDTEXT CLASS WILL USE THE CONTENTS BELOW -->
+                    <div class="textcontainer">
+                        <div class="textgroup">
+                            <div class="imgtext">
+                                Full Body<br>
+                                <b>$25-60</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards">
+                    <img loading="" class="imgs" src="./assets/cm2-CSs12O3d.jpg">
+                </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards mediumwidecard">
+                    <img loading="" class="imgs" src="./assets/cm3-BSnXRacl.jpg">
+                </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards">
+                    <img loading="" class="imgs" src="./assets/cm6-r75cxgg8.jpg">
+                </div>
+
+                <a target="_blank" href="https://potato22.github.io/commission" class="cards linkcard"
+                    data-aos-duration="500" data-aos-easing="sleek" data-aos="fade-right">
+                    <div style="color: var(--textD);" class="textcard invis bigger col">
+                        <b>Full Sheet</b>
+                        <svg class="customarrow" viewBox="0 0 10 10">
+                            <g>
+                                <path class="line" d="M0 5h7"></path>
+                                <path class="arrow" d="M1 1l4 4-4 4"></path>
+                            </g>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <!-- CARDGRID -->
+            <div id="trivia" class="anchor"></div>
+            <div class="cardgrid">
+                <div class="cards invis textcard superwidecard">
+                    <div class="titletextcard">Trivia</div>
+                    <div class="tcsubquote">::Things?</div>
+                </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out"
+                    class="cards invis dynamic-narrowvp-wide-tall">
+                    <video preload="none" autoplay muted loop class="imgs"
+                        src="./assets/ceramic-VGC8lfYN.webm"></video>
+                </div>
+                <div class="cards textcard invis widecard dynamic-narrowvp-wide-tall tcregread">
+                    <div class="titletextcard">Who?</div>
+                    Hello, Potto here. Firstly, I appreciate your time to check this "hub"! I consider myself a hobbyist
+                    artist who draws pretty ponies in a pretty environment out of sheer enjoyment. I don't look forward
+                    into the My Little Pony fandom that much, rather I just enjoy doing just the ponies (primarily
+                    Original Characters). Although I do enjoy doing other things too. Either that's 3D work, sound/music
+                    and webdev.<br>
+                </div>
+            </div>
+            <div class="cardgrid">
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards tallcard">
+                    <img loading="" class="imgs leftoffset" src="./assets/trainstation-b-C8V-GSCO.jpg">
+                </div>
+                <div class="cards textcard invis widecard tcregread">
+                    <div class="titletextcard">Oulie Mareota</div>
+                    You most likely have seen this girl, if anything, there's a concerning amount of her appearance in
+                    every each of my works. <b>Nicknamed Mary</b>, existed since as early as 2017.
+                </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out"
+                    class="cards backgroundtext widecard">
+                    <img loading="" class="imgs" src="./assets/grow-CCyfA1L3.jpg">
+                    <!-- ### BACKGROUNDTEXT CLASS WILL USE THE CONTENTS BELOW -->
+                    <div class="textcontainer">
+                        <div class="textgroup">
+                            <div class="imgtext">
+                                She is a port of my self-expression. In a way that she is a part of me but she's an
+                                entity by herself.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards textcard invis mediumwidecard tcregread">
+                    <div class="bypass">
+                        Mary is a pegasus who barely ever flies, she appreciates walking a lot more than flying. She
+                        spends a lot of time in her bedroom, a lot. She loves pillows and probably is one herself.
+                    </div>
+                    <div class="textgroup tcreg">
+                        <div class="buttonalign">
+                            <a target="_blank" href="https://refsheet.net/Potto/mary">
+                                <div class="go">Check her details
+                                    <svg class="dynamicarrow" viewBox="0 0 10 10">
+                                        <g>
+                                            <path class="line" d="M0 5h7"></path>
+                                            <path class="arrow" d="M1 1l4 4-4 4"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </a>
+                            <a target="_blank"
+                                href="https://docs.google.com/document/d/1lBEODK4Ib4ur2lEM0CUKOIRh8_tKRUjZPEcFu4TsMXg/edit?usp=sharing">
+                                <div class="go">Check her Wiki (?)
+                                    <svg class="dynamicarrow" viewBox="0 0 10 10">
+                                        <g>
+                                            <path class="line" d="M0 5h7"></path>
+                                            <path class="arrow" d="M1 1l4 4-4 4"></path>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos-duration="500" data-aos-easing="sleek" data-aos="zoom-out" class="cards mediumwidecard">
+                    <img loading="" class="imgs" src="./assets/doodle8-DmEw1Sux.jpg">
+                </div>
+            </div>
+            <!-- EXTRA -->
+
+            <div id="extra" class="anchor"></div>
+            <div class="wideGo openExtraButton" orbreact="true">
+                <div class="wideGoTitle">See more goodies ...</div>
+            </div>
+            <div class="extraWrap" style="display: none;">
+                <!-- CARDGRID -->
+                <div class="cardgrid">
+                    <div class="cards invis textcard superwidecard">
+                        <del>The end of page</del> Might as well add...<br>
+                        <div class="titletextcard">(THREE)D</div>
+                        <div class="tcsubquote">::Millions of vertices are extruded, probably.</div>
+                    </div>
+                    <video preload="none" autoplay muted loop data-aos="zoom-in"
+                        class="imgs self imgz cards imgcard aos-init aos-animate bigcard" orbreact="true"
+                        src="./assets/neonixEasy-Bk_8XvVB.webm"
+                        alt="An advert-like presentation of a custom nixie tube clock design."></video>
+                    <video preload="none" autoplay muted loop data-aos="zoom-in"
+                        class="imgs self imgz cards imgcard aos-init aos-animate" orbreact="true"
+                        src="./assets/curt-CRTsto7e.webm"
+                        alt="Fabric curtain simulation demo in an indoor setting."></video>
+                    <img loading="lazy" data-aos="zoom-in" class="imgs self imgz cards imgcard aos-init aos-animate"
+                        orbreact="true" src="./assets/qublast-CXd5es0_.jpg"
+                        alt="'QUBLAST' Inspired by the hacking tool alike 'FLipper Zero' combined with a mini oscilloscope multimeter/multitool.">
+                    <img loading="lazy" data-aos="zoom-in"
+                        class="imgs self imgz cards imgcard aos-init aos-animate mediumwidecard topoffset" orbreact="true"
+                        src="./assets/muzen-Bnc5m7CY.jpg"
+                        alt="A love letter to Muzen's 'Wild Jeep' Bluetooth speaker design bonus with a pile of my nixie tube models next to it.">
+                    <img loading="lazy" data-aos="zoom-in" class="imgs self imgz cards imgcard aos-init aos-animate"
+                        orbreact="true" src="./assets/wacom-DeXh5QGf.jpg"
+                        alt="A high-detail modeling challenge of a Wacom Intuos Mini.">
+                    <video preload="none" autoplay muted loop data-aos="zoom-in"
+                        class="imgs self imgz cards imgcard aos-init aos-animate mediumwidecard" orbreact="true"
+                        src="./assets/coolfab-CrsesdS9.webm"
+                        alt="A more extensive fabric simulation with added detail, very very 'added' detail."></video>
+                    <video preload="none" autoplay muted loop data-aos="zoom-in"
+                        class="imgs self imgz cards imgcard aos-init aos-animate" orbreact="true"
+                        src="./assets/neonix-5lodcW05.webm"
+                        alt="'Neo-Classic' Design Nixie tube clock with functioning controller."></video>
+                    <img loading="lazy" data-aos="zoom-in" class="imgs self imgz cards imgcard aos-init aos-animate"
+                        orbreact="true" src="./assets/rob-D_5JyAzv.jpg"
+                        alt="Modelling challenge of a spherical robot.">
+                    <img loading="lazy" data-aos="zoom-in" class="imgs self imgz cards imgcard aos-init aos-animate widecard"
+                        orbreact="true" src="./assets/veh-C5kGPabT.jpg"
+                        alt="Modelling challenge to create an exotic vehicle, probably for antartic - or just another planet...">
+                </div>
+                <!-- CARDGRID -->
+                <div id="design" class="anchor"></div>
+                <div class="cardgrid">
+                    <div class="cards invis textcard superwidecard">
+                        <div class="titletextcard">Design and Motion Graphics</div>
+                        <div class="tcsubquote">::oh no it's 2 pixels off.</div>
+                    </div>
+                    <video preload="none" autoplay muted loop data-aos="zoom-in"
+                        class="imgs self imgz cards imgcard aos-init aos-animate" orbreact="true"
+                        src="./assets/c-BLC6KHYo.webm"
+                        alt="Motion design improvisation out of a letter 'C'."></video>
+                    <video preload="none" autoplay muted loop data-aos="zoom-in"
+                        class="imgs self imgz cards imgcard aos-init aos-animate" orbreact="true"
+                        src="./assets/retroux-CnN22J-Z.webm"
+                        alt="<a target='_blank' class='zoomaltlink' href='https://www.youtube.com/watch?v=JW4epapyoT4'>(View full here!)</a><br>It looks horrid in quality (And small!), but not unintentional. It is infact to emulate the old school screen capture of a Nintendo DS back in the days of YouTube. The 'UX' itself in the background isn't from any real game. It simply is a mockup of a UX/UI for an NDS game I completely made up. -- Music is <a target='_blank' class='zoomaltlink' href='https://www.youtube.com/watch?v=uzSgbomtdcg'>Configuration by DV-i</a>"></video>
+                    <video preload="none" autoplay muted loop data-aos="zoom-in"
+                        class="imgs self imgz cards imgcard aos-init aos-animate bigcard reducevol" orbreact="true"
+                        src="./assets/moonlight-C42nHsR8.webm"
+                        alt="<a target='_blank' class='zoomaltlink' href='https://www.youtube.com/watch?v=Mh1vdgCz-ww'>(View full here!)<br></a> Unconventional dynamic music visualizer out of the song <a target='_blank' class='zoomaltlink' href='https://www.youtube.com/watch?v=-IjbWJwj0Wc'>'Moonlight' by 7dB</a>, syncing the song by a literal bpm clock on the bottom left I added. and add several unique quirks on some synth instruments or song progression."></video>
+                    <video preload="none" autoplay muted loop data-aos="zoom-in"
+                        class="imgs self imgz cards imgcard aos-init aos-animate mediumwidecard" orbreact="true"
+                        src="./assets/ps5-BOKLJ7GV.webm"
+                        alt="This is a mockup of Sony's PS5 UX/UI when a crash of a game occurs. All the artifacts are part of the video."></video>
+                    <video preload="none" autoplay muted loop data-aos="zoom-in"
+                        class="imgs self imgz cards imgcard aos-init aos-animate" orbreact="true"
+                        src="./assets/jh-BkPPz6TM.webm"
+                        alt="One day I woke up and decided to make my good friend an animated logo out of nowhere."></video>
+                    <video preload="none" autoplay muted loop data-aos="zoom-in"
+                        class="imgs self imgz cards imgcard aos-init aos-animate mediumwidecard" orbreact="true"
+                        src="./assets/1000-BKhu8geB.mp4"
+                        alt="This was created to celebrate my social media followers reaching and above 1000, followed with me launching a free vector art raffle for a selected few people."></video>
+                    <video preload="none" autoplay muted loop data-aos="zoom-in"
+                        class="imgs self imgz cards imgcard aos-init aos-animate" orbreact="true"
+                        src="./assets/EP-D9o_az5j.webm"
+                        alt="This is part of an EP (Extended Playlist) songs (yes I occassionally make music too sometimes.) I published that's still a big part of my heart."></video>
+
+                </div>
+            </div>
+            <!-- <script src="src/js/lib/dagallery.js"></script> -->
+            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+            <script>
+                $('.openExtraButton').click(function () {
+                    $(this).addClass('opensExtraforU')
+                    $('.extraWrap').show()
+                });
+            </script>
+            <script>
+                var scroll = new SmoothScroll('a[href*="#"]', {
+                    speed: 800,
+                });
+            </script>
+            <script>
+                $(document).ready(function () {
+                    $(".loadblock").fadeOut('fast');
+                })
+            </script>
+            <script defer>
+                AOS.init();
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
