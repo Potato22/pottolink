@@ -27,7 +27,7 @@
 
     <!-- <script src="src/js/lib/jquery.min.js"></script> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
 
     <link rel="stylesheet" href="src/css/global/root.css">
     <link rel="stylesheet" href="src/css/index.css">
@@ -669,30 +669,30 @@
             <!-- <script src="src/js/lib/dagallery.js"></script> -->
             <!-- <script type="module" src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
             <script type="module">
+                import $ from "jquery";
                 import AOS from 'aos';
-                import 'aos/dist/aos.css'; // You can also use <link> for styles
-                // ..
+                import 'aos/dist/aos.css';
+            
+                // Initialize AOS (Animate On Scroll)
                 AOS.init();
-            </script>
-
-            <script type="module">
-                import $ from "jquery"
-                $('.openExtraButton').click(function () {
-                    $(this).addClass('opensExtraforU')
-                    $('.extraWrap').show()
+            
+                // Open extra button functionality
+                $(document).ready(function() {
+                    $('.openExtraButton').click(function() {
+                        $(this).addClass('opensExtraforU');
+                        $('.extraWrap').show();
+                    });
                 });
-            </script>
-            <script type="module">
-                import $ from "jquery"
-                var scroll = new SmoothScroll('a[href*="#"]', {
+            
+                // Smooth scroll functionality
+                const smoothScroll = new SmoothScroll('a[href*="#"]', {
                     speed: 800,
                 });
-            </script>
-            <script type="module">
-                import $ from "jquery"
-                $(document).ready(function () {
+            
+                // Loadblock fade out
+                $(document).ready(function() {
                     $(".loadblock").fadeOut('fast');
-                })
+                });
             </script>
         </div>
     </div>
