@@ -1,3 +1,4 @@
+import { css } from 'jquery';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
@@ -11,6 +12,8 @@ export default defineConfig({
         main: './index.html',
         gallery: './gallery.html'
       }
-    }
+    },
+    cssCodeSplit: true,
+    cssMinify: true
   }
 });

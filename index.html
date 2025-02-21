@@ -32,11 +32,15 @@
     <link rel="stylesheet" href="src/css/global/root.css">
     <link rel="stylesheet" href="src/css/index.css">
 
+
+    <script type="module">
+
+    </script>
     <script type="module" src="src/js/navviewport.js" defer></script>
     <script type="module" src="src/js/themetoggle.js" defer></script>
     <script type="module" src="src/js/lib/b2DispGallery_index.js"></script>
     <script type="module" src="src/js/lib/aosconfig.js" defer></script>
-    <script type="module" src="src/js/lib/smooth-scroll.js"></script>
+    <!-- <script type="module" src="src/js/lib/smooth-scroll.js"></script> -->
     <script type="module" src="src/js/zoomtrigger.js" defer></script>
 
     <script src="/src/orb/poc.mjs" type="module"></script>
@@ -670,27 +674,21 @@
             <!-- <script type="module" src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
             <script type="module">
                 import $ from "jquery";
-                import AOS from 'aos';
-                import 'aos/dist/aos.css';
-            
-                // Initialize AOS (Animate On Scroll)
-                AOS.init();
-            
                 // Open extra button functionality
-                $(document).ready(function() {
-                    $('.openExtraButton').click(function() {
+                $(document).ready(function () {
+                    $('.openExtraButton').click(function () {
                         $(this).addClass('opensExtraforU');
                         $('.extraWrap').show();
                     });
                 });
-            
+
                 // Smooth scroll functionality
-                const smoothScroll = new SmoothScroll('a[href*="#"]', {
-                    speed: 800,
-                });
-            
+                //const smoothScroll = new SmoothScroll('a[href*="#"]', {
+                //    speed: 800,
+                //});
+
                 // Loadblock fade out
-                $(document).ready(function() {
+                $(document).ready(function () {
                     $(".loadblock").fadeOut('fast');
                 });
             </script>

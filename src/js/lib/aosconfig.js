@@ -1,18 +1,22 @@
-AOS.init(), AOS.init({
-    disable: !1,
-    startEvent: "DOMContentLoaded",
-    initClassName: "aos-init",
-    animatedClassName: "aos-animate",
-    useClassNames: !1,
-    disableMutationObserver: !1,
-    debounceDelay: 50,
-    throttleDelay: 99,
-    offset: 120,
-    delay: 0,
-    duration: 400,
-    easing: "ease",
-    once: !1,
-    mirror: !1,
-    anchorPlacement: "top-bottom",
-    disable: 'mobile'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+document.addEventListener('DOMContentLoaded', () => {
+    AOS.init({
+        disable: false,
+        startEvent: 'DOMContentLoaded',
+        initClassName: 'aos-init',
+        animatedClassName: 'aos-animate',
+        useClassNames: false,
+        disableMutationObserver: false,
+        debounceDelay: 50,
+        throttleDelay: 99,
+        offset: 120,
+        delay: 0,
+        duration: 400,
+        easing: 'ease',
+        once: false,
+        mirror: false,
+        anchorPlacement: 'top-bottom'
+    });
 });

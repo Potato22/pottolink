@@ -32,11 +32,12 @@
     <link rel="stylesheet" href="src/css/global/root.css">
     <link rel="stylesheet" href="src/css/gallery.css">
 
-
     <script type="module" src="src/js/lib/b2DispGallery_gallery.js"></script>
     <script type="module" src="src/js/themetoggle.js" defer></script>
     <script type="module" src="src/js/galleryFilter.js" defer></script>
     <script type="module" src="src/js/zoomtrigger.js" defer></script>
+    <script type="module" src="src/js/lib/aosconfig.js" defer></script>
+
 
     <script src="/src/orb/poc.mjs" type="module"></script>
     <!-- <script src="src/js/navviewport.js" defer></script> -->
@@ -158,7 +159,7 @@
 
             <!-- <button id="loadMore">Load More</button> -->
 
-            <div id="loadMore" class="wideGo" orbreact="true" style="display: none;">
+            <div id="loadMore" class="wideGo" orbreact="true" style="display: none; text-align: center;">
                 <a class="wideGoTitle">Load more
                     <svg class="dynamicarrow" viewBox="0 0 10 10">
                         <g>
@@ -172,10 +173,9 @@
         </div>
         <!-- <script src="src/js/lib/dagallery.js"></script> -->
         <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
-        <!-- <script src="src/js/lib/aosconfig.js" defer></script> -->
         <!-- <script src="src/js/lib/smooth-scroll.js"></script> -->
 
-        <script>
+        <script type="module">
             import $ from "jquery"
             $(document).ready(function () {
                 $('.themetogglecont').css({
