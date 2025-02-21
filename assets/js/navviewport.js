@@ -46,46 +46,25 @@ function chapter() {
     var triviabool;
     var extrabool;
 
-    if (about <= 0) {
-        aboutbool = true;
-        //console.log("about active")
-    } else {
-        aboutbool = false;
-    }
+    const sectionsBoolers = [
+        { offset: about, bool: 'aboutbool' },
+        { offset: create, bool: 'createbool', prevBool: 'aboutbool' },
+        { offset: gall, bool: 'gallbool' },
+        { offset: comm, bool: 'commbool', prevBool: 'gallbool' },
+        { offset: trivia, bool: 'triviabool', prevBool: 'commbool' },
+        { offset: extra, bool: 'extrabool', prevBool: 'triviabool' }
+    ];
 
-    if (create <= 0) {
-        createbool = true;
-        aboutbool = false;
-    } else {
-        createbool = false;
-    }
-
-    if (gall <= 0) {
-        gallbool = true;
-    } else {
-        gallbool = false;
-    }
-
-    if (comm <= 0) {
-        commbool = true;
-        gallbool = false;
-    } else {
-        commbool = false;
-    }
-
-    if (trivia <= 0) {
-        triviabool = true;
-        commbool = false;
-    } else {
-        triviabool = false;
-    }
-
-    if (extra <= 0) {
-        extrabool = true;
-        triviabool = false;
-    } else {
-        extrabool = false;
-    }
+    sectionsBoolers.forEach((section, i) => {
+        if (section.offset <= 0) {
+            window[section.bool] = true;
+            if (section.prevBool) {
+                window[section.prevBool] = false;
+            }
+        } else {
+            window[section.bool] = false;
+        }
+    });
 
     //console.log('creatbool', createbool, '\n gallbool', gallbool, '\n commbool', commbool, '\n triviabool', triviabool, '\n extrabool', extrabool )
     //console.log('createbool %s, gallbool %s, triviabool %s', createbool, gallbool, triviabool, extrabool)
