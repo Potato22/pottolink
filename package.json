@@ -13,11 +13,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@rollup/plugin-inject": "^5.0.5",
     "@types/jquery": "^3.5.32",
-    "vite": "^6.1.1"
-  },
-  "dependencies": {
     "aos": "^3.0.0-beta.6",
-    "jquery": "^3.7.1"
+    "jquery": "^3.7.1",
+    "vite": "^6.1.1"
   }
 }

@@ -1,14 +1,10 @@
 import { defineConfig } from 'vite'
 import path from 'path';
+import inject from '@rollup/plugin-inject';
 
 export default defineConfig({
   root: '.',
   base: './',
-  resolve: {
-    alias: {
-      'jquery': path.resolve(__dirname, 'node_modules/jquery/dist/jquery.min.js')
-    }
-  },
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
@@ -20,5 +16,14 @@ export default defineConfig({
     },
     cssCodeSplit: true,
     cssMinify: true
-  }
+  },
+  plugins: [
+    inject({
+      $: 'jquery',
+      jQuery: 'jquery',
+    })
+  ],
+  optimizeDeps: {
+    include: ['jquery']
+  },
 });
