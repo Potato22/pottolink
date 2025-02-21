@@ -1,4 +1,3 @@
-import { css } from 'jquery';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
