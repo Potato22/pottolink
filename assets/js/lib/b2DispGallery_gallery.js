@@ -202,7 +202,7 @@ async function fetchDisplay() {
         return await response.json();
     } catch (error) {
         const errorMessage = error.name === 'AbortError'
-            ? 'Request timed out. Please try again.'
+            ? `Request timed out. You could probably try refreshing but it's a lot more likely something went horribly wrong in the backend.`
             : `Error: ${error.message}`;
 
         loadingIndicator.textContent = errorMessage;
@@ -266,7 +266,7 @@ async function fetchDisplay() {
         } catch (error) {
             console.error('Initialization failed:', error);
             if (loadingIndicator) {
-                loadingIndicator.textContent = 'Failed to load images. Please try again.';
+                loadingIndicator.textContent = `Failed to load images. Which means it can only mean that something is broken beyond human comprehension.`;
                 loadingIndicator.classList.remove('holdon');
             }
         }
